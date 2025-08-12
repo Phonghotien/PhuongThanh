@@ -1,0 +1,29 @@
+:root {
+  --size-hd: 19rem;
+  --color-pri: #0054c5;
+  --color-sec: #093d83;
+  --color-tt: #333333;
+  --color-text: #494949;
+  --color-txt: #666666;
+  --color-black: #000;
+  --color-white: #fff;
+  --cl-border: #ddd;
+  --rs: 1.6rem;
+  // distance section
+  --pd-sc: 10rem;
+
+  @media (max-width: 1200px) {
+    --pd-sc: 4rem;
+    --size-hd: 6rem;
+    --rs: 0.8rem;
+  }
+}
+
+//Responsive
+$res-mobile: 1199px;
+$res-mobile-min: 1200px;
+$mobile: 500px;
+//Distance
+$radius: 0.6rem;
+// cubic
+$cubic: cubic-bezier(0.72, 0.04, 0.49, 0.82);
