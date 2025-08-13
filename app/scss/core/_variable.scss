@@ -1,8 +1,8 @@
 :root {
-  --size-hd: 19rem;
-  --color-pri: #0054c5;
-  --color-sec: #093d83;
-  --color-tt: #333333;
+  --size-hd: 10rem;
+  --color-pri: #ff0009;
+  --color-sec: #15264b;
+  --color-tt: #141414;
   --color-text: #494949;
   --color-txt: #666666;
   --color-black: #000;
@@ -14,7 +14,7 @@
 
   @media (max-width: 1200px) {
     --pd-sc: 4rem;
-    --size-hd: 6rem;
+    --size-hd: 8rem;
     --rs: 0.8rem;
   }
 }

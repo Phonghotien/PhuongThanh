@@ -5,7 +5,7 @@
   position: fixed;
   z-index: 140;
   top: var(--size-hd);
-  right: 0;
+  left: 0;
   bottom: 0;
   padding-bottom: 4rem;
   min-width: 50rem;
@@ -13,7 +13,7 @@
   background-color: white;
   box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.05);
   @include transition(0.4s, linear);
-  transform: translateX(110%);
+  transform: translateX(-110%);
   overflow: hidden;
   @include max(500px) {
     width: 90%;
@@ -55,7 +55,7 @@
     @include transition(0.6s, ease);
     opacity: 0;
     visibility: hidden;
-    transform: translateX(110%);
+    transform: translateX(-110%);
     //  border-top: 1px solid $color-border-01;
     top: var(--size-hd);
 

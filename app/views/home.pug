@@ -1,0 +1,223 @@
+extends layout/layout
+
+block vars
+    -title = ''
+    -bodyClass = 'page-home'
+
+block container
+   .bnh 
+      .bnh-wrap 
+         .bnh-slider.slideFade
+            .bnh-sw
+               +Swiper()
+                  each i, index in Array(2)
+                     .swiper-slide.col 
+                        .bnh-item
+                           .bnh-img 
+                              +img(`bnh-img (${index + 1}).jpg`)
+                           .container 
+                              .bnh-content
+                                 .t-head 
+                                    span.t-top
+                                       +img("bnh-text1.svg")
+                                 +Btn("Liên hệ với chúng tôi")
+               +pagination("bnh-pagination")
+               +SwiperControl("bnh-control")
+   section.sec-hab
+      .container 
+         .hab 
+            .hab-wrap 
+               .hab-row.row 
+                  .col.col-3
+                     .hab-group 
+                        .hab-it 
+                           .t-head
+                              span.t-num.countNum 03
+                           .t-des 
+                              p 
+                                 | Đơn vị thành viên cơ cấu tổ chức
+                        .hab-it 
+                           .t-head
+                              span.t-num.countNum 1740
+                              span.t-txt 
+                                 | tỷ đồng
+                           .t-des 
+                              p Doanh thu 2018
+                        .hab-it 
+                           .t-head
+                              span.t-num.countNum 1200
+                              span.t-txt 
+                                 | Nhân viên
+                           .t-des 
+                              p Bao gồm các công ty thành viên
+                        .hab-it 
+                           .t-head
+                              span.t-num.countNum 120
+                              span.t-txt 
+                                 | km
+                           .t-des 
+                              p Đường cao tốc đã thi công
+                  .col.col-9
+                     .hab-panel
+                        .hab-list.row 
+                           .col.col-6
+                              .hab-image 
+                                 .inner 
+                                    +img("hab-img.jpg") 
+                           .col.col-6
+                              .hab-content
+                                 +title("CON ĐƯỜNG ĐẾN TƯƠNG LAI")
+                                 .b-des
+                                    .mona-content 
+                                       p 
+                                          | Được thành lập từ năm 1999, đến nay 
+                                          span.fw-7 Phương Thành Tranconsin
+                                          | đã có 20 năm hình thành và phát triển.
+                                       p 
+                                          | Thực hiện chủ trương của Nhà nước, của Chính phủ nói chung và Bộ GTVT nói riêng, năm 2004, Phương Thành là một trong những doanh nghiệp tiên phong cổ phần hóa và nằm trong số rất ít những doanh nghiệp thành công sau cổ phần hóa.
+                                       p Sau 20 năm thành lập và 15 năm cổ phần, Phương Thành có thể tự hào khẳng định được vị thế là một trong những doanh nghiệp lớn của Bộ GTVT trong lĩnh vực đầu tư và xây dựng các công trình giao thông và đặc biệt là các tuyến đường cao tốc trọng điểm của đất nước.
+                                 +Btn("Xem thêm")
+   section.sec-hbi.ss-pd 
+      .container 
+         .hbi 
+            .hbi-wrap 
+               .hbi-panel 
+                  .b-head 
+                     +title("Về Phương Thành")
+                  .b-panel 
+                     .iwt 
+                        span.icon 
+                           +img("hbi-ic (1).svg")
+                        .t-gr 
+                           span.text TẦM NHÌN 
+                           .t-des 
+                              p 
+                                 | Phấn đấu trở thành doanh nghiệp hàng đầu trong lĩnh vực đầu tư và xây dựng hạ tầng giao thông, đặc biệt là các tuyến cao tốc trọng điểm.
+                              p 
+                                 | Phương Thành hướng đến phát triển bền vững, uy tín, vươn tầm khu vực, góp phần hiện đại hóa hệ thống giao thông quốc gia.
+                     .iwt 
+                        span.icon 
+                           +img("hbi-ic (2).svg")
+                        .t-gr 
+                           span.text TẦM NHÌN 
+                           .t-des
+                              p 
+                                 | Cung cấp các công trình giao thông chất lượng cao, hiệu quả, đúng tiến độ. Phương Thành hoạt động dựa trên giá trị cốt lõi:
+                              p.fw-7
+                                 | “Chân thành – Trách nhiệm – Trung thực – Hiệu quả, lấy Tâm làm nền tảng, giữ vững uy tín với đối tác, khách hàng và cộng đồng.”
+               .hbi-dcor 
+                  .inner 
+                     +img("hbi-dc.png")
+            .hbi-box
+               .b-dcor 
+                  +img("hbi-dc2.png")
+               .t-head 
+                  span.txt PHƯƠNG THÀNH TRANCOSSIN
+               .b-gr 
+                  span.t-dc thi công
+                  span.t-num 45
+                  span.txt Tỉnh thành trên khắp cả nước
+   section.sec-hpj.ss-pd 
+      .container-second 
+         .hpj
+            .hpj-wrap
+               .hpj-head 
+                  +title("Dự án nổi bật","second white")
+               .hbj-block 
+                  .hpj-slider.slideSw
+                     +SwiperControl("hpj-control") 
+                     .b-sw 
+                        +Swiper()
+                           each i, index in Array(4)
+                              .swiper-slide.col 
+                                 .pj-item 
+                                    a(href="").hidden-link 
+                                    .b-top 
+                                       .b-img
+                                          .tag.iwt 
+                                             span.icon 
+                                                +img("tag-ic.svg")
+                                             span.txt Hà Nội
+                                          .inner 
+                                             +img(`pj-img (${index + 1}).jpg`)
+                                       .b-abs 
+                                          .iwt 
+                                             span.icon 
+                                                +img("pj-ic (1).svg")
+                                             .t-gr 
+                                                span.text Chiều dài
+                                                span.t-num 30 Km
+                                          .iwt 
+                                             span.icon 
+                                                +img("pj-ic (2).svg")
+                                             .t-gr 
+                                                span.text Tổng giá trị
+                                                span.t-num 6700 tỷ
+                                          .iwt 
+                                             span.icon 
+                                                +img("pj-ic (3).svg")
+                                             .t-gr 
+                                                span.text Nhân sự
+                                                span.t-num 1000+
+                                          .iwt 
+                                             span.icon 
+                                                +img("pj-ic (4).svg")
+                                             .t-gr 
+                                                span.text Thời gian
+                                                span.t-num 2014 - 2018
+                                    h3.b-title
+                                       a(href="").t-link
+                                          |  DỰ ÁN ĐẦU TƯ NÂNG CẤP TUYẾN ĐƯỜNG PHÁP VÂN - CẦU GIẼ THEO HÌNH THỨC HỢP ĐỒNG BOT
+   section.sec-hw.ss-pd
+      .container-second 
+         .hw 
+            .hw-wrap 
+               .hw-head.mb-40
+                  +title("Lĩnh vực hoạt động","title40")
+               .hw-block 
+                  .hw-slider.slideSw 
+                     +SwiperControl("hw-control")
+                     .b-sw 
+                        +Swiper()
+                           each i, index in Array(5)
+                              .swiper-slide.col 
+                                 .hw-it 
+                                    .box-img 
+                                       .inner 
+                                          +img(`hw-img (${index + 1}).jpg`)
+                                    .box-ctn 
+                                       .b-abs
+                                          span.icon 
+                                             +img(`hw-ic (${index + 1}).svg`)
+                                          span.t-txt XÂY DỰNG CẦU ĐƯỜNG
+   section.sec-fb.ss-pd 
+      .fb 
+         .fb-wrap
+            .fb-slider.slideFade
+               .b-control 
+                  +SwiperControl("fb-control")
+               .b-sw
+                  +Swiper()
+                     each i, index in Array(2)
+                        .swiper-slide.col 
+                           .fb-it 
+                              .fb-abs 
+                                 .container 
+                                    .fb-ctn 
+                                       span.icon-quote 
+                                          +img("ic-quote.svg")
+                                       .t-des
+                                          p 
+                                             | “Gắn bó với Phương Thành hơn 10 năm, tôi không chỉ trưởng thành về chuyên môn mà còn học được cách làm việc có tâm, có trách nhiệm.
+                                          p 
+                                             | Môi trường ở đây đề cao tính kỷ luật, minh bạch nhưng cũng rất nhân văn và đoàn kết. Mỗi công trình là một thử thách, nhưng cũng là cơ hội để anh em kỹ sư, công nhân cùng nhau sáng tạo, vượt khó và để lại dấu ấn. Tôi tự hào khi được góp phần xây dựng những tuyến đường nối liền mọi miền Tổ quốc.”
+                                       .b-author 
+                                          .iwt 
+                                             span.icon 
+                                                +img("avt-img.jpg")
+                                             .t-gr 
+                                                span.t-name Nguyễn Văn A
+                                                span.t-pos.fw-7 Kỹ sư xây dựng
+                              .fb-img 
+                                 .inner 
+                                    +img(`fb-img (${index + 1}).jpg`)

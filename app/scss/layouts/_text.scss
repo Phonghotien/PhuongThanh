@@ -1,17 +1,31 @@
 @use "../core/mixin" as *;
 @use "../core/font" as *;
 .t-title {
-  @include fz-64;
-  color: #002868;
+  @include fz-24;
+  color: var(--color-tt);
   text-wrap: pretty;
   position: relative;
-  @include font-second;
-  line-height: 1.2;
+  font-weight: 700;
 }
 .head {
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
+  &.second {
+    .t-title {
+      @include fz-40;
+    }
+  }
+  &.white {
+    .t-title {
+      color: var(--color-white);
+    }
+  }
+  &.title40 {
+    .t-title {
+      @include fz-40;
+    }
+  }
   @include max(1024px) {
     gap: 1.6rem;
   }

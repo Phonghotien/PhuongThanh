@@ -1,2 +1,98 @@
 @use "../core/mixin" as *;
 @use "../core/font" as *;
+
+.ft {
+  padding: 6rem 0;
+  &-row {
+    > .col {
+      @include max(1024px) {
+        width: 100%;
+      }
+    }
+  }
+
+  &-logo {
+    @include max(1024px) {
+      margin-bottom: 2.4rem;
+    }
+    .custom-logo-link {
+      @include mid-flex;
+      max-width: 18rem;
+      @include max(1024px) {
+        margin: 0 auto;
+      }
+    }
+  }
+  &-group {
+    display: flex;
+    gap: 2.4rem;
+    @include max(768px) {
+      flex-wrap: wrap;
+      row-gap: 2.4rem;
+      column-gap: 0;
+      margin: 0 -1.2rem;
+    }
+    &-item {
+      flex: 1;
+
+      @include max(768px) {
+        width: 50%;
+        flex: unset;
+        padding: 0 1.2rem;
+      }
+      .t-head {
+        @include fz-16;
+        font-weight: 700;
+        color: var(--color-sec);
+        margin-bottom: 2.4rem;
+      }
+      .b-list {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+      }
+    }
+  }
+  &-box {
+    font-size: 1.4rem;
+    color: var(--color-black);
+    word-break: break-word;
+    .t-text {
+      font-weight: 600;
+    }
+  }
+  &-nav {
+    .menu {
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+      &-item {
+        &.current-menu-item {
+          .menu-link {
+            color: var(--color-pri);
+          }
+        }
+      }
+      &-link {
+        @include fz-14;
+        font-weight: 600;
+        color: var(--color-black);
+        transition: 0.3s ease-in-out;
+        @include hover {
+          color: var(--color-pri);
+        }
+      }
+    }
+  }
+  &-bot {
+    margin-top: 6rem;
+  }
+  &-sign {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    .icon {
+      display: flex;
+    }
+  }
+}

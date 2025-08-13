@@ -1,4 +1,6 @@
-@import url("../assets/font/Inter/stylesheet.css");
+@import url("../assets/font/Roboto/stylesheet.css");
+@import url("../assets/font/Montserrat/stylesheet.css");
+@import url("../assets/font/SVN-BebasNeuePro/stylesheet.css");
 
 * {
   box-sizing: border-box;
@@ -14,7 +16,7 @@ html {
 }
 
 body {
-  font-family: "Inter", serif;
+  font-family: "Roboto", serif;
   font-size: 16px;
   line-height: 1.55;
   font-weight: 400;
@@ -64,7 +66,7 @@ textarea {
 
 .container {
   width: 100%;
-  max-width: 147rem;
+  max-width: 123rem;
   height: 100%;
   margin: 0 auto;
   padding: 0 1.5rem;

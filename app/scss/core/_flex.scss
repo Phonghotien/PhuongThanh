@@ -15,6 +15,7 @@
 .rows {
   --cg: 3.2rem;
   --rg: 3.2rem;
+  margin: 0 calc(var(--rg) * -0.5);
   @include mixin.max(1200px) {
     --cg: 1.2rem;
     --rg: 1.2rem;
@@ -110,6 +111,12 @@
       gap: 2.4rem;
     }
   }
+  &.gap32 {
+    gap: 3.2rem;
+    @include mixin.max(1200px) {
+      gap: 1.2rem;
+    }
+  }
   &.gap24 {
     gap: 2.4rem;
     @include mixin.max(1024px) {
@@ -133,5 +140,8 @@
     @include mixin.max(1024px) {
       gap: 0.6rem;
     }
+  }
+  &.not-gap {
+    gap: 0;
   }
 }

@@ -1,2 +1,58 @@
 @use "../core/mixin" as *;
 @use "../core/font" as *;
+
+.bnh {
+  &-item {
+    position: relative;
+  }
+  &-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &-content {
+    min-height: calc(600 / 1512 * 100vw);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 2.4rem;
+    padding: 10% 0;
+    @include max(1024px) {
+      padding: 4rem 0;
+      min-height: 36rem;
+      gap: 1.6rem;
+    }
+  }
+  &-sw {
+    position: relative;
+  }
+  &-pagination.swiper-pagination {
+    position: absolute;
+    bottom: 1.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 1;
+    max-width: 123rem;
+    padding: 0 1.5rem;
+    z-index: 10;
+  }
+  &-control.swiper-control {
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    @include max(768px) {
+      display: none;
+    }
+  }
+}

@@ -1,6 +1,18 @@
 @use "../core/mixin" as *;
 @use "../core/font" as *;
 
+.hd {
+  --color-link: var(--color-white);
+  --color-link-sub: var(--color-sec);
+  --color-link-mobile: var(--color-sec);
+  --gap: -1.2rem;
+  --gap-item: 1.2rem;
+  --font-size-link: 1.6rem;
+  --font-weight-link: 500;
+  --font-size-link-mobile: 1.8rem;
+  --font-weight-link-mobile: 500;
+  --gap-item-mobile: 1.2rem;
+}
 .hd-nav {
   height: 100%;
   @include max(1200px) {
@@ -9,15 +21,7 @@
   .menu {
     &-nav {
       height: 100%;
-      --color-link: var(--color-white);
-      --color-link-sub: var(--color-white);
-      --gap: -1rem;
-      --gap-item: 1rem;
-      --font-size-link: 1.4rem;
-      --font-weight-link: 500;
-      --font-size-link-mobile: 1.8rem;
-      --font-weight-link-mobile: 600;
-      --gap-item-mobile: 0 1.2rem;
+
       > .menu-list {
         height: 100%;
         margin: 0 var(--gap);
@@ -247,7 +251,7 @@
             @include flex;
             justify-content: space-between;
             align-items: center;
-            color: var(--color-link);
+            color: var(--color-link-mobile);
             font-size: var(--font-size-link-mobile);
             font-weight: var(--font-weight-link-mobile);
             border-bottom: 0.1rem solid rgb(245, 246, 247);
@@ -298,7 +302,7 @@
         justify-content: space-between;
         padding: var(--gap-item-mobile);
         font-size: var(--font-size-link-mobile);
-        color: var(--color-link);
+        color: var(--color-link-mobile);
         font-weight: var(--font-weight-link-mobile);
       }
 
