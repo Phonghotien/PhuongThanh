@@ -1,0 +1,152 @@
+extends layout/layout
+
+block vars
+    -title = ''
+    -bodyClass = 'page-career-detail'
+
+block container
+   +bnp("bnp-td.jpg","Tuyển dụng","Minh bạch – Uy tín – Đồng hành phát triển","Tuyển dụng")
+   section.sec-career-detail.ss-pd
+      .career-detail-bg
+         +img("career-detail-bg.png")
+      .container
+         .career-detail
+            .career-detail-wrap
+               .career-detail-row.row 
+                  .col.col-8
+                     .career-detail-content 
+                        .career-detail-inner 
+                           .mona-content 
+                              h3.fw-7.c-sec.t18 
+                                 | Địa điểm làm việc
+                              p 
+                                 | Các công trường thi công tại: Hải Phòng, Quảng Ninh, Thanh Hóa, Bình Thuận.
+                              h3.fw-7.c-sec.t18 
+                                 | Tiêu chuẩn tuyển dụng
+                              ul 
+                                 li 
+                                    | Có bằng nghề/chứng chỉ nghề đúng chuyên ngành (bao gồm ứng viên mới tốt nghiệp).
+                                 li 
+                                    | Sức khỏe tốt, đạo đức nghề nghiệp và tác phong làm việc nghiêm túc.
+                                 li 
+                                    | Ưu tiên ứng viên đã từng phục vụ quân ngũ hoặc tham gia hoạt động công tác đoàn thể.
+                              h3.fw-7.c-sec.t18 
+                                 | Chế độ thu nhập & đãi ngộ
+                              span.fw-7.c-black 
+                                 | Mức thu nhập
+                              ul 
+                                 li 
+                                    | Nhóm phụ việc, cần đào tạo thêm: 8,5 – 12 triệu đồng/tháng.
+                                 li 
+                                    | Nhóm có thể đảm nhiệm công việc ngay: 13 – 18 triệu đồng/tháng.
+                                 li 
+                                    | Nhóm yêu cầu tay nghề cao hoặc bậc cao: 19 – 21,5 triệu đồng/tháng.
+                              span.fw-7.c-black 
+                                 | Chế độ đãi ngộ
+                              ul 
+                                 li 
+                                    | Tháng 26 công, có lương tăng ca hoặc khoán sản lượng.
+                                 li 
+                                    | Lương tháng 13, thưởng năng suất, thưởng thi đua.
+                                 li 
+                                    | Nghỉ lễ, Tết theo quy định và hưởng nguyên lương.
+                                 li 
+                                    | Phụ cấp thâm niên, phụ cấp khu vực.
+                                 li 
+                                    | Hỗ trợ chi phí đi lại, nghỉ phép, sinh nhật, hiếu hỷ.
+                              h3.fw-7.c-sec.t18 
+                                 | Hồ sơ dự tuyển
+                              p 
+                                 | Thời gian nhận hồ sơ: 18/01/2022 – 28/02/2022
+                              span.fw-7.c-black 
+                                 | Hồ sơ gồm:
+                              ul 
+                                 li 
+                                    | Căn cước công dân
+                                 li 
+                                    | Sổ hộ khẩu
+                                 li 
+                                    | Sơ yếu lý lịch tự thuật
+                                 li 
+                                    | Bản sao giấy khai sinh
+                                 li 
+                                    | Giấy chứng nhận sức khỏe
+                                 li 
+                                    | Bằng nghề hoặc chứng chỉ nghề
+                                 li 
+                                    | 02 ảnh 4×6
+                              h3.fw-7.c-sec.t18 
+                                 | Cách thức nộp hồ sơ
+                              p 
+                                 | Nộp online qua website.
+                              p 
+                                 | Phỏng vấn trực tiếp hoặc online tùy tình hình thực tế.
+                              p.fw-7 Liên hệ khi cần thiết:
+                              ul 
+                                 li
+                                    | Mr. Kiên – Phòng TC-HC: 0916.299.966
+                                 li 
+                                    | Mr. Hải – Phòng TC-HC: 0981.252.922
+                  .col.col-4
+                     .career-detail-sidebar
+                        .ct-form 
+                           .ct-form-wrap
+                              .b-inner 
+                                 .b-head
+                                    +title("Ứng tuyển","white title40")
+                                 .b-form
+                                    form(action="")
+                                       .form-list.row 
+                                          .col.form-ip 
+                                             input(type="text" placeholder="Họ và tên")
+                                          .col.form-ip 
+                                             input(type="text" placeholder="Địa chỉ")
+                                          .col.form-ip 
+                                             input(type="text" placeholder="Email")
+                                          .col.form-ip 
+                                             input(type="text" placeholder="Số điện thoại")
+                                          .col.form-ip 
+                                             input(type="text" placeholder="Vị trí ứng tuyển")
+                                          .col.form-ip 
+                                             .form-file
+                                                .form-group
+                                                   span.wpcf7-form-control-wrap(data-name="your-file")
+                                                      input(id="file-send" type="file" name="your-file" class="wpcf7-form-control wpcf7-file wpcf7-validates-as-required fileInput")
+                                                   label(for="file-send" class="filename")
+                                                      .t-gr 
+                                                         span.icon
+                                                            +img("upload.svg")
+                                                         span.txt Đính kèm CV
+                                       .b-submit 
+                                          +Btn("Nộp đơn ứng tuyển")
+   section.sec-career-rl.ss-pd 
+      .container 
+         .career-rl-wrap 
+            .career-rl-head.mb-40
+               .d-flex.j-bw.a-center
+                     +title("Những vị trí đang tuyển khác","title40")
+                     +Btn("Xem tất cả")
+            .career-rl-block 
+               .career-rl-slider.slideSw
+                  .b-sw 
+                     +Swiper()
+                        each i,index in Array(4)
+                           .swiper-slide.col.col-6 
+                              .career-item
+                                 .b-inner 
+                                    .t-head 
+                                       h3.t-text 
+                                          a(href="").t-link
+                                             |  Lái xe
+                                       span.t-type HÀ NỘI 
+                                    .b-panel 
+                                       .b-group
+                                          .b-item 
+                                             span.text Số lượng 
+                                             span.value 1
+                                          .b-item 
+                                             span.text Mức lương 
+                                             span.value 20 - 25 triệu
+                                          .b-item 
+                                             span.text Hạn ứng tuyển
+                                             span.value 20/05/2025

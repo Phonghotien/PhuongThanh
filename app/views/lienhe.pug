@@ -1,0 +1,88 @@
+extends layout/layout
+
+block vars
+    -title = ''
+    -bodyClass = 'page-contact'
+
+block container
+   +bnp("bnp-ct.jpg","Liên hệ với chúng tôi","Kết nối để cùng xây dựng những công trình mang dấu ấn vươn xa","Liên hệ")
+   section.sec-ct.ss-pd 
+      .container 
+         .ct 
+            .ct-wrap 
+               .ct-row.row 
+                  .col.col-3
+                     .ct-panel 
+                        .t-head 
+                           +title("Thông tin liên hệ")
+                        .t-des 
+                           p 
+                              |  Với hơn 20 năm hình thành và phát triển, Công ty Cổ phần Đầu tư và Xây dựng Giao thông Phương Thành tự hào là một trong những đơn vị tiên phong và uy tín hàng đầu trong lĩnh vực đầu tư – xây dựng hạ tầng giao thông, đặc biệt là các tuyến cao tốc trọng điểm của quốc gia.
+                  .col.col-9
+                     .ct-info 
+                        .t-head
+                           span.t-text  CÔNG TY CỔ PHẦN ĐẦU TƯ VÀ XÂY DỰNG GIAO THÔNG PHƯƠNG THÀNH
+                        .b-block 
+                           .ct-list.row 
+                              .col.col-6 
+                                 .ct-box 
+                                    span.icon 
+                                       +img("ct-ic (1).svg")
+                                    .t-gr 
+                                       span.txt ĐỊA CHỈ
+                                       a(href="").t-link
+                                          |  D3 Nơ 15, ĐTM Định Công, P. Định Công, Q. Hoàng Mai, Hà Nội
+                              .col.col-6 
+                                 .ct-box 
+                                    span.icon 
+                                       +img("ct-ic (2).svg")
+                                    .t-gr 
+                                       span.txt ĐIỆN THOẠI
+                                       a(href="").t-link
+                                          |  (84-24) 3574 3158
+                              .col.col-6 
+                                 .ct-box 
+                                    span.icon 
+                                       +img("ct-ic (3).svg")
+                                    .t-gr 
+                                       span.txt EMAIL
+                                       a(href="").t-link
+                                          |  phuongthanh@phuongthanhtranconsin.com
+                              .col.col-6 
+                                 .ct-box 
+                                    span.icon 
+                                       +img("ct-ic (4).svg")
+                                    .t-gr 
+                                       span.txt MẠNG XÃ HỘI
+                                       .mxh-social
+                                          each i,index in Array(4)
+                                             .i-link 
+                                                +img(`ic-sc (${index + 1}).svg`)
+   .ct-form 
+      .container
+         .ct-form-wrap
+            .b-inner 
+               .b-head
+                  +title("Liên hệ với chúng tôi","white title40")
+                  .t-des 
+                     p 
+                        | Chúng tôi luôn sẵn sàng lắng nghe, hợp tác và cùng bạn kiến tạo nên những giá trị bền vững cho tương lai.
+               .b-form
+                  form(action="")
+                     .form-list.row 
+                        .col.form-ip 
+                           input(type="text" placeholder="Họ và tên")
+                        .col.col-6.form-ip 
+                           input(type="text" placeholder="Email")
+                        .col.col-6.form-ip 
+                           input(type="text" placeholder="Số điện thoại")
+                        .col.form-ip 
+                           input(type="text" placeholder="Tên công ty")
+                        .col.form-ip 
+                           textarea(name="" placeholder="Nội dung")
+                     .b-submit 
+                        +Btn("Liên hệ với chúng tôi")
+   .ctm-map 
+      .ctm-iframe 
+         .inner 
+            iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17675.381802160486!2d105.81840271127334!3d20.98390962519582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135acf587927d3f%3A0x407ca203a0891b89!2zxJDhu4tuaCBDw7RuZywgSG_DoG5nIE1haSwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e1!3m2!1svi!2s!4v1755241302865!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade")

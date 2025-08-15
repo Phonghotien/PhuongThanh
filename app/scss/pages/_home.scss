@@ -602,3 +602,356 @@
     }
   }
 }
+.bld-image {
+  @include mid-flex;
+}
+.sec-bld {
+  position: relative;
+}
+.bld {
+  &-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+.sec-rw {
+  padding: 8rem 0;
+  background: var(--color-sec);
+}
+.rw {
+  &-head {
+    text-align: right;
+    @include max(1200px) {
+      text-align: center;
+    }
+  }
+}
+.rw-it {
+  padding: 2.4rem;
+  height: 100%;
+  background: #fff;
+  border-bottom: 0.3rem solid var(--color-pri);
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  min-height: 44rem;
+
+  .icon-quote {
+    @include flex;
+    width: 3.2rem;
+  }
+  .b-des {
+    @include fz-16;
+    color: var(--color-black);
+  }
+  .b-bot {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.4rem;
+    margin-top: auto;
+  }
+  .b-author {
+    display: flex;
+    color: var(--color-black);
+    flex-direction: column;
+    .txt {
+      font-size: 1.4rem;
+    }
+  }
+  .b-logo {
+    max-width: 10rem;
+    display: flex;
+  }
+}
+.rw-block {
+  width: 90%;
+  margin-left: auto;
+  @include max(1200px) {
+    width: 100%;
+  }
+}
+.rw-control {
+  @include max(1200px) {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+.rw-slider {
+  display: flex;
+  gap: 2.4rem;
+  @include max(1200px) {
+    flex-direction: column;
+  }
+  .b-sw {
+    flex: 1;
+  }
+  .swiper {
+    &-slide {
+      width: calc(100% / 2.6);
+      @include max(1200px) {
+        width: 50%;
+      }
+      @include max(600px) {
+        width: 100%;
+      }
+    }
+  }
+}
+.sec-rw {
+  position: relative;
+}
+.rw-img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 34%;
+  @include max(1200px) {
+    display: none;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.hnews-cate {
+  width: max-content;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: 2.4rem;
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.1);
+  .swiper {
+    --rg: 0rem;
+    --cg: 0.6rem;
+    &-slide {
+      width: fit-content;
+      white-space: nowrap;
+    }
+  }
+}
+.hnews-link {
+  color: #4e4e4e;
+  @include fz-16;
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  text-align: center;
+  &.active {
+    color: var(--color-pri);
+    border-bottom: 0.2rem solid var(--color-pri);
+  }
+  @include hover {
+    color: var(--color-pri);
+  }
+}
+.news-it {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #eeeeee;
+  transition: 0.3s ease-in-out;
+  @include hover {
+    background: var(--color-pri);
+    .b-ctn {
+      .t-text {
+        color: var(--color-white);
+      }
+      .b-des {
+        color: var(--color-white);
+      }
+      .t-head {
+        border-color: rgba(255, 255, 255, 0.5);
+        .b-time {
+          color: var(--color-white);
+          border-color: rgba(255, 255, 255, 0.5);
+        }
+      }
+      .b-bot {
+        .t-tag {
+          color: var(--color-white);
+        }
+      }
+    }
+  }
+  .b-img {
+    .inner {
+      aspect-ratio: 389 / 165;
+      img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+    }
+  }
+  .b-ctn {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1.2rem;
+    @include max(768px) {
+      padding: 1.2rem;
+    }
+    .t-head {
+      display: flex;
+      padding-bottom: 1.2rem;
+      border-bottom: 0.1rem solid rgba(0, 0, 0, 0.1);
+      .b-time {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        color: var(--color-pri);
+        width: 5rem;
+        padding-right: 1.2rem;
+        margin-right: 1.2rem;
+        transition: 0.3s ease-in-out;
+        flex-shrink: 0;
+        border-right: 0.1rem solid rgba(0, 0, 0, 0.1);
+        .t-date {
+          font-weight: 700;
+        }
+        .t-year {
+          font-size: 1.2rem;
+          letter-spacing: 0.5rem;
+        }
+      }
+      .t-text {
+        font-weight: 700;
+        @include fz-18;
+        @include lc(2);
+        transition: 0.3s ease-in-out;
+      }
+    }
+    .b-des {
+      @include fz-16;
+      color: var(--color-black);
+      @include lc(3);
+      transition: 0.3s ease-in-out;
+    }
+    .b-bot {
+      margin-top: auto;
+      .t-tag {
+        color: #a2a2a2;
+        @include fz-16;
+        font-weight: 500;
+        transition: 0.3s ease-in-out;
+      }
+    }
+  }
+}
+.hnews-block {
+  margin-top: 4rem;
+}
+.hnews-slider {
+  .swiper {
+    &-slide {
+      @include max(1024px) {
+        width: 50%;
+      }
+      @include max(768px) {
+        width: 75%;
+      }
+    }
+  }
+}
+.brand {
+  &-slider {
+    width: max-content;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .swiper {
+    --cg: 6rem;
+    @include max(768px) {
+      --cg: 3rem;
+    }
+    &-slide {
+      width: 20rem;
+      @include max(768px) {
+        width: 12rem;
+      }
+    }
+  }
+}
+.brand-it {
+  .inner {
+    aspect-ratio: 1/1;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+  }
+}
+.brands-it {
+  height: 100%;
+  @include mid-flex;
+  .inner {
+    height: 10rem;
+    @include max(768px) {
+      height: 6rem;
+    }
+    img {
+      display: block;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+.brands-slider {
+  width: max-content;
+  max-width: 100%;
+  margin: 0 auto;
+  .swiper {
+    --cg: 6rem;
+    @include max(768px) {
+      --cg: 3rem;
+    }
+    &-slide {
+      width: max-content;
+    }
+  }
+}
+.sec-connect {
+  padding: 4rem 0;
+  background: #15264b;
+}
+.connect-wrap {
+  display: flex;
+  gap: 10rem;
+  align-items: center;
+  @include max(1200px) {
+    flex-direction: column;
+    gap: 2.4rem;
+    text-align: center;
+  }
+  .col-left {
+    flex: 1;
+  }
+  .btn {
+    &::after {
+      background: var(--color-white);
+    }
+    @include hover {
+      color: var(--color-pri);
+    }
+  }
+}
+.connect-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}

@@ -221,3 +221,113 @@ block container
                               .fb-img 
                                  .inner 
                                     +img(`fb-img (${index + 1}).jpg`)
+   section.sec-bld.ss-pd-b
+      .bld-bg 
+         +img("bld-bg.svg")
+      .container
+         .bld 
+            .bld-wrap 
+               .bld-head.t-center.mb-40
+                  +title("Ban lãnh đạo","title40")
+               .bld-block 
+                  .bld-image 
+                     .inner 
+                        +img("bld-img.png")
+   section.sec-rw
+      .rw-img 
+         +img("rw-img.jpg")
+      .container 
+         .rw-head.mb-40
+            .head.title40.white
+               h2.t-title 
+                  | Khách hàng
+                  br
+                  | nói gì về chúng tôi
+      .container-second
+         .rw-block
+            .rw-slider.slideSw
+               +SwiperControl("rw-control")
+               .b-sw
+                  +Swiper()
+                     each i, index in Array(3)
+                        .swiper-slide.col
+                           .rw-it
+                              span.icon-quote
+                                 +img("ic-quote.svg")
+                              .b-des
+                                 p 
+                                    | "Là đơn vị chủ đầu tư của dự án tuyến cao tốc trọng điểm, chúng tôi đánh giá cao năng lực thi công, tinh thần trách nhiệm và sự chuyên nghiệp của Phương Thành. Các hạng mục do công ty thực hiện đều đảm bảo chất lượng, tiến độ và tuân thủ nghiêm ngặt các tiêu chuẩn kỹ thuật. Phương Thành thực sự là đối tác tin cậy trong lĩnh vực xây dựng hạ tầng giao thông."
+                              .b-bot 
+                                 .b-author
+                                    span.txt Đại diện Ban Quản lý
+                                    span.text.fw-7 Công ty FECON S&C
+                                 .b-logo 
+                                    span.icon-logo 
+                                       +img("logo-rw.png")
+   section.sec-hnews.ss-pd 
+      .container 
+         .hnews
+            .hnews-wrap 
+               .hnews-head.t-center
+                  +title("Tin tức","title40")
+                  .hnews-cate 
+                     .b-slide.slideSw
+                        +Swiper()
+                           .swiper-slide.col
+                              a(href="").hnews-link.active
+                                 | TẤT CẢ 
+                           .swiper-slide.col
+                              a(href="").hnews-link
+                                 | BẢNG TIN CÔNG TY
+                           .swiper-slide.col
+                              a(href="").hnews-link
+                                 | TIN NGÀNH XÂY DỰNG
+                           .swiper-slide.col
+                              a(href="").hnews-link
+                                 | KHEN THƯỞNG
+                           .swiper-slide.col
+                              a(href="").hnews-link
+                                 | SỰ KIỆN - ĐẤU THẦU
+                           .swiper-slide.col
+                              a(href="").hnews-link
+                                 | BẢN TIN THỊ TRƯỜNG
+               .hnews-block 
+                  .hnews-slider.slideSw
+                     .b-sw 
+                        +Swiper()
+                           each i, index in Array(4)
+                              .swiper-slide.col.col-4 
+                                 +news(index)
+                  .mt-24
+                     +Btn("Xem thêm","","center")
+   section.sec-brand.ss-pd-b 
+      .container 
+         .brand
+            .brand-wrap
+               .brand-head.t-center.mb-24
+                  +title("Đơn vị thành viên","title40")
+               .brand-block 
+                  .brand-slider.slideSw
+                     .b-sw 
+                        +Swiper()
+                           each i, index in Array(4)
+                              .swiper-slide.col
+                                 .brand-it
+                                    .inner 
+                                       +img(`brand-img (${index + 1}).png`)
+   section.sec-brands.ss-pd-b 
+      .container 
+         .brands
+            .brands-wrap
+               .brands-head.t-center.mb-24
+                  +title("Đối tác đồng hành","title40")
+      .brands-block 
+         .brands-slider.slideSw
+            .b-sw 
+               +Swiper()
+                  each i, index in Array(7)
+                     .swiper-slide.col
+                        .brands-it
+                           .inner 
+                              +img(`brands-img (${index + 1}).png`)
+   +connect()

@@ -30,17 +30,17 @@ export default function ComponentModule() {
     }, 500);
   });
   //   Massonry
-  (function ($) {
-    "use strict";
+  //   (function ($) {
+  //     "use strict";
 
-    $(window).load(function () {
-      $(".masonry").masonry({
-        columnWidth: ".grid-sizer",
-        gutter: ".gutter-sizer",
-        itemSelector: ".item-masonry",
-      });
-    });
-  })(jQuery);
+  //     $(window).load(function () {
+  //       $(".masonry").masonry({
+  //         columnWidth: ".grid-sizer",
+  //         gutter: ".gutter-sizer",
+  //         itemSelector: ".item-masonry",
+  //       });
+  //     });
+  //   })(jQuery);
   //   Scroll to section
   window.addEventListener("load", function () {
     const speed = 0;
@@ -186,4 +186,14 @@ export default function ComponentModule() {
       priceMax.innerHTML = maxVal;
     });
   }
+  document.querySelectorAll(".fileInput").forEach(function (fileInput) {
+    fileInput.addEventListener("change", function (event) {
+      var fileNameDisplay = fileInput.parentElement.nextElementSibling;
+      fileNameDisplay.textContent = "";
+      if (event.target.files.length > 0) {
+        var file = event.target.files[0];
+        fileNameDisplay.textContent = file.name;
+      }
+    });
+  });
 }

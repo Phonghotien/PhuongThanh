@@ -150,3 +150,48 @@ mixin like()
             polygon(points='90,10 80,20')
             polygon(points='90,50 80,50')
             polygon(points='80,80 70,70')
+mixin news(index)
+   .news-it 
+      .b-img 
+         .inner 
+            +img(`news-img (${index + 1}).jpg`)
+      .b-ctn 
+         .t-head 
+            .b-time 
+               span.t-date 03.07
+               span.t-year 2025
+            h3.t-text 
+               a(href="")  Lãnh đạo Công đoàn Xây dựng Việt Nam động viên người lao động dịp Tháng Công nhân
+         .b-des 
+            p 
+               | Tiếp tục các hoạt động nhân dịp Tháng Công nhân và Tháng hành động về An toàn, vệ sinh lao động năm 2025, mới đây, Công đoàn Xây dựng Việt Nam đã tổ chức các đoàn công tác tới các đơn vị, doanh nghiệp, công trình trọng điểm để động viên, tặng quà người lao động.
+         .b-bot 
+            a(href="").t-tag
+               |  BẢNG TIN CÔNG TY
+mixin bnp(img,title,des,breadcrumb)
+   .bnp 
+      .bnp-img 
+         +img(img)
+      .container 
+         .bnp-wrap 
+            .bnp-ctn 
+               +breadCrumb([breadcrumb])
+               h1.bnp-title 
+                  | #{title}
+               .t-des 
+                  p 
+                     | #{des}
+mixin connect()
+   .sec-connect 
+      .container 
+         .connect
+            .connect-wrap
+               .col-left
+                  .connect-panel 
+                     .t-head 
+                        +title("Liên hệ với chúng tôi","white")
+                     .t-des.c-white
+                        p 
+                           | Chúng tôi luôn sẵn sàng lắng nghe và hỗ trợ bạn. Để biết thêm thông tin về các dự án, vui lòng để lại thông tin chúng tôi sẽ liên hệ lại trong thời gian sớm nhất
+               .col-right
+                  +Btn("Liên hệ ngay")

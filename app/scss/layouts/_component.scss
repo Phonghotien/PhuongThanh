@@ -207,12 +207,12 @@
   @include mid-flex;
   --iz: 1.4rem;
   --fz: 1.6rem;
-  --rs: 100rem;
-  --fw: 500;
-  --cl: var(--color-pri);
-  --py: 0.6rem 1.2rem;
+  --rs: 0rem;
+  --fw: 600;
+  --cl: #4e4e4e;
+  --py: 1.2rem 2.4rem;
   --gap: 0.4rem;
-  --bg: #d2e5ff;
+  --bg: #eeeeee;
   display: flex;
   align-items: center;
   gap: var(--gap);
@@ -224,12 +224,59 @@
   padding: var(--py);
   line-height: 1.2;
   width: fit-content;
-
+  transition: 0.3s ease-in-out;
   .icon {
     @include mid-flex;
     width: var(--iz);
     height: var(--iz);
     flex-shrink: 0;
+  }
+  @include hover {
+    background: var(--color-pri);
+    color: #fff;
+  }
+}
+.form {
+  &-group {
+    position: relative;
+    padding: 0rem 0.8rem;
+    background: transparent;
+    @include mid-flex;
+    text-align: center;
+    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.5);
+    flex: 1;
+    min-height: 4.2rem;
+    input.fileInput {
+      position: absolute;
+      @include full;
+      opacity: 0;
+      height: 100%;
+      padding: unset;
+      cursor: pointer;
+    }
+    .filename {
+      font-size: 1.6rem;
+      color: rgba(255, 255, 255, 0.5);
+      font-weight: 500;
+      word-wrap: break-word;
+      width: 100%;
+      .t-gr {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+      }
+      .t-txt {
+        color: #3e3e5c;
+        font-weight: 400;
+        word-wrap: break-word;
+      }
+      .icon {
+        width: 2.4rem;
+        height: 2.4rem;
+        @include mid-flex;
+        font-size: 1.6rem;
+      }
+    }
   }
 }
 .full {

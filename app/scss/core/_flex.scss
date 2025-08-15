@@ -1,8 +1,8 @@
 @use "./mixin" as mixin;
 
 .row {
-  --cg: 3.2rem;
-  --rg: 3.2rem;
+  --cg: 2.4rem;
+  --rg: 2.4rem;
   @include mixin.flex-wr;
   margin: 0 calc(var(--cg) * -0.5) calc(var(--rg) * -1);
   //   row-gap: var(--rg);
@@ -13,8 +13,8 @@
 }
 
 .rows {
-  --cg: 3.2rem;
-  --rg: 3.2rem;
+  --cg: 2.4rem;
+  --rg: 2.4rem;
   margin: 0 calc(var(--rg) * -0.5);
   @include mixin.max(1200px) {
     --cg: 1.2rem;
