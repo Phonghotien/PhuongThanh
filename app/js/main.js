@@ -15,6 +15,7 @@ import ScrollTriggerModule from "./module/ScrollTriggerModule.js";
 import ComponentModule from "./module/ComponentModule.js";
 import DatePickerModule from "./module/DatePickerModule.js";
 import SmoothScrollModule from "./module/SmoothScrollModule.js";
+import MasonryModule from "./module/MasonryModule.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   ScrollTriggerModule();
@@ -34,4 +35,5 @@ window.addEventListener("DOMContentLoaded", () => {
   CollapseModule();
   ComponentModule();
   SmoothScrollModule();
+  MasonryModule();
 });

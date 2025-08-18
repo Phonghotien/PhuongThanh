@@ -1,0 +1,107 @@
+@use "../core/mixin" as *;
+@mixin mq($media) {
+  @if $media == xxs {
+    @media (max-width: 480px) {
+      @content;
+    }
+  }
+  @if $media == xs {
+    @media (min-width: 481px) and (max-width: 767px) {
+      @content;
+    }
+  } @else if $media == sm {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $media == md {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if $media == lg {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else if $media == non-retina {
+    @media screen and (-webkit-max-device-pixel-ratio: 1) {
+      @content;
+    }
+  } @else if $media == retina {
+    @media screen and (-webkit-min-device-pixel-ratio: 2) {
+      @content;
+    }
+  } @else {
+    @media only screen and (max-width: #{$media}px) {
+      @content;
+    }
+  }
+}
+
+// I'n not good at math, took me longer than it should to figure out this mixin
+@mixin masonry($columns, $gutter-size) {
+  .masonry {
+    margin: 0;
+
+    .grid-sizer,
+    .item-masonry {
+      width: calc((100% - (#{$columns - 1}) * #{$gutter-size}) / #{$columns});
+    }
+
+    .gutter-sizer {
+      width: $gutter-size;
+    }
+
+    .item-masonry {
+      margin-bottom: $gutter-size;
+      // border-radius: 1.2rem;
+      overflow: hidden;
+      transition: 0.3s ease-in-out;
+      cursor: pointer;
+
+      @include hover {
+        img {
+          transform: scale(1.05);
+        }
+      }
+      img {
+        width: 100%;
+        display: block;
+        height: 100%;
+        vertical-align: middle;
+        transition: 0.3s ease-in-out;
+      }
+    }
+  }
+}
+
+// This is where the magic happens
+// set the $gutter-width %
+$gutter-width: 1%;
+
+// set number of columns for breakponts
+@include mq(xxs) {
+  @include masonry(2, $gutter-width); // 2 columns
+}
+
+@include mq(xs) {
+  @include masonry(3, $gutter-width); // 3 columns
+}
+
+@include mq(sm) {
+  @include masonry(3, $gutter-width); // 4 columns
+}
+
+@include mq(md) {
+  @include masonry(3, $gutter-width); // 5 columns
+}
+
+@include mq(lg) {
+  @include masonry(3, $gutter-width); // 6 columns
+}
+.fancybox-image,
+.fancybox-spaceball {
+  border-radius: 1.2rem;
+  overflow: hidden;
+  @include max(768px) {
+    border-radius: 0.6rem;
+  }
+}

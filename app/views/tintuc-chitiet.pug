@@ -1,0 +1,47 @@
+extends layout/layout
+
+block vars
+    -title = ''
+    -bodyClass = 'page-news-detail'
+
+block container
+   +bnp("bnp-news-detail.jpg","Hợp long cầu dài nhất cao tốc Bắc – Nam qua Quảng Bình","Hợp long cầu dài nhất cao tốc Bắc – Nam qua Quảng Bình","Dự án")
+   section.sec-news-dt.ss-pd 
+      .container 
+         .news-dt 
+            .news-dt-wrap
+               .news-dt-row.row 
+                  .col.col-9
+                     .news-dt-content 
+                        .mona-content 
+                           p 
+                              | Content
+                        .b-bot.d-flex.a-center
+                           span.txt Chia sẻ bài viết
+                           .b-share.mxh-social 
+                              each i,index in Array(3)
+                                 a(href="").i-link
+                                    +img(`ic-sc (${index + 1}).svg`) 
+                  .col.col-3
+                     .news-dt-sidebar
+                        .news-dt-toc 
+                           | Plugin Toc 
+                        .news-dt-relate
+                           h2.t-title.c-pri Tin nổi bật
+                           each i,index in Array(4)
+                              +news(index)
+   section.sec-news-rl.ss-pd 
+      .container 
+         .news-rl
+            .news-rl-wrap 
+               .news-rl-head.d-flex.a-center.j-bw
+                  +title("Xem thêm các bài viết khác")
+                  +Btn("Xem tất cả")
+               .hnews-block 
+                  .hnews-slider.slideSw
+                     .b-sw 
+                        +Swiper()
+                           each i, index in Array(4)
+                              .swiper-slide.col.col-4 
+                                 +news(index)
+   +connect()

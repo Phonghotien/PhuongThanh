@@ -104,14 +104,110 @@
     font-weight: 700;
     @include fz-48;
     color: var(--color-white);
+    @include lc(2);
   }
   &-ctn {
-    max-width: 50%;
+    max-width: 60%;
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
     .t-des {
       color: var(--color-white);
+    }
+  }
+}
+.bnj {
+  position: relative;
+  overflow: hidden;
+  &-container {
+    max-width: 100%;
+    width: calc(100vw - (100vw - 123rem) / 2);
+    margin-left: auto;
+    padding: 4rem 0;
+    @include max(768px) {
+      padding: 2rem 0;
+      padding-top: 8rem;
+    }
+  }
+  &-img {
+    position: absolute;
+    @include full;
+    z-index: -1;
+    &::before {
+      content: "";
+      position: absolute;
+      @include full;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, #000000 100%);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      @include full;
+      background: linear-gradient(
+        270deg,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0) 100%
+      );
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &-flex {
+    display: flex;
+    margin: 0 -2.4rem;
+    min-height: calc((600 / 1500) * 100vw);
+    padding-left: 1.5rem;
+    @include max(768px) {
+      padding: 0 1.5rem;
+    }
+    .col-left {
+      width: 60%;
+      padding: 0 2.4rem;
+      @include max(768px) {
+        width: 100%;
+      }
+    }
+    .col-right {
+      width: 40%;
+      padding: 0 2.4rem;
+      @include max(768px) {
+        display: none;
+      }
+    }
+  }
+  &-title {
+    @include fz-32;
+    font-weight: 700;
+    color: var(--color-white);
+    @include lc(3);
+  }
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    height: 100%;
+    justify-content: flex-end;
+  }
+  &-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+    height: 100%;
+    &-item {
+      padding-bottom: 1rem;
+      border-bottom: 0.1rem solid var(--color-white);
+      @include fz-18;
+      .iwt {
+        --iz: 4rem;
+      }
+      .val {
+        font-weight: 700;
+      }
     }
   }
 }

@@ -1,0 +1,215 @@
+extends layout/layout
+
+block vars
+    -title = ''
+    -bodyClass = 'page-project-detail'
+
+block container
+   .bnj 
+      .bnj-img 
+         +img("bnj-img.jpg")
+      .bnj-wrap 
+         .bnj-container 
+            .bnj-flex 
+               .col-left 
+                  .bnj-content 
+                     +breadCrumb(["Dự án","Gói thầu số 15 – Xây dựng cầu Bến Rừng thuộc Dự án đầu tư xây dựng cầu Bến Rừng nối huyện Thuỷ Nguyên, thành phố Hải Phòng và thị xã Quảng Yên, tỉnh Quảng Ninh"])
+                     h1.bnj-title 
+                        | Gói thầu số 15 – Xây dựng cầu Bến Rừng thuộc Dự án đầu tư xây dựng cầu Bến Rừng nối huyện Thuỷ Nguyên, thành phố Hải Phòng và thị xã Quảng Yên, tỉnh Quảng Ninh
+                     +Btn("DỰ ÁN ĐANG TRIỂN KHAI")
+               .col-right
+                  .bnj-info 
+                     .bnj-info-item
+                        .iwt 
+                           span.icon 
+                              +img("ic-bnj (1).svg")
+                           .t-gr 
+                              span.txt Chiều dài
+                              span.val 2
+                     .bnj-info-item
+                        .iwt 
+                           span.icon 
+                              +img("ic-bnj (2).svg")
+                           .t-gr 
+                              span.txt Tổng giá trị
+                              span.val 2
+                     .bnj-info-item
+                        .iwt 
+                           span.icon 
+                              +img("ic-bnj (3).svg")
+                           .t-gr 
+                              span.txt Nhân sự 
+                              span.val 10-15 triệu
+                     .bnj-info-item
+                        .iwt 
+                           span.icon 
+                              +img("ic-bnj (4).svg")
+                           .t-gr 
+                              span.txt Thời gian
+                              span.val 25/11/2025
+   section.sec-prj-info.ss-pd
+      .container 
+         .prj-info
+            .prj-info-row.row 
+               .col.col-4
+                  .prj-info-image 
+                     .inner 
+                        +img("prj-info-img.jpg")
+               .col.col-7
+                  .prj-info-content 
+                     .head.title40
+                        h2.t-title.c-pri Thông tin chính
+                     .b-content 
+                        .mona-content 
+                           p 
+                              | Gói thầu số 15 – Xây dựng cầu Bến Rừng thuộc Dự án đầu tư xây dựng cầu Bến Rừng nối huyện Thuỷ Nguyên, thành phố Hải Phòng và thị xã Quảng Yên, tỉnh Quảng Ninh:
+                           p 
+                              span.fw-7 
+                                 | Chủ đầu tư: 
+                              | Ban Quản lý dự án đầu tư xây dựng các công trình giao thông Hải Phòng
+                           p 
+                              span.fw-7 
+                                 | Giá trị gói thầu:
+                              | 458/1811 tỷ
+                           p 
+                              span.fw-7 
+                                 | Thực hiện:
+                              | 2022 – 2024
+                           p 
+                              span.fw-7 
+                                 | Giá trị gói thầu: 
+                              | 458/1811 tỷ
+                           p 
+                              span.fw-7 
+                                 | Cấp: 
+                              | công trình giao thông cầu đường bộ, cấp đặc biệt
+                           p 
+                              span.fw-7 
+                                 | Địa điểm xây dựng: 
+                              | H.Thủy Nguyên TP Hải Phòng và H.Quảng Yên, tỉnh Quảng Ninh
+                           p 
+                              span.fw-7 
+                                 | Các hạng mục thi công chính:
+                              ul 
+                                 li 
+                                    | Thi công cầu dây văng
+                                 li 
+                                    | Thi công cầu dẫn nhịp superT
+                                 li 
+                                    | Thi công móng cọc khoan nhồi trên sông, hệ thống đường đầu cầu, tường chắn và cống hộp….
+   section.sec-prj-desc.ss-pd 
+      .container 
+         .prj-desc
+            .prj-desc-panel 
+               .mona-content 
+                  h2.c-sec.fw-7.t24 
+                     | Công đoạn hợp long – điểm nhấn của toàn bộ dự án
+                  p 
+                     | Hợp long là một trong những công đoạn phức tạp và quan trọng nhất của quá trình xây dựng cầu. Các kỹ sư cầu đường nhiều năm kinh nghiệm của Công ty Phương Thành đã túc trực tại hiện trường, giám sát từng bước thi công. Trước khi đổ bê tông hợp long, đội ngũ đã tiến hành cân chỉnh từng milimet, kiểm soát nghiêm ngặt mọi yếu tố kỹ thuật để đảm bảo hai khối kết cấu từ hai phía gặp nhau chính xác, tạo nên một khối liền mạch vững chắc.
+                  p 
+                     | Theo các kỹ sư trực tiếp thi công, khu vực sông Gianh có nền địa chất phức tạp, nhiều lớp đất yếu và điều kiện thủy văn thay đổi theo mùa. Điều này đòi hỏi đội ngũ thi công phải áp dụng giải pháp kỹ thuật tiên tiến, sử dụng thiết bị hiện đại và tuân thủ nghiêm ngặt các tiêu chuẩn xây dựng. Trước khi hợp long nhịp cầu đúc hẫng giữa, mọi thông số về cao độ, tọa độ, độ võng, khe co giãn đều được đo đạc và kiểm tra nhiều lần để đảm bảo khớp nối chính xác tuyệt đối, không cho phép sai số.
+                  h2.c-sec.fw-7.t24 
+                     | Hoàn thiện các hạng mục cuối và chuẩn bị thông xe
+                  p 
+                     | Sau khi hợp long, công trường nhanh chóng chuyển sang giai đoạn hoàn thiện. Hiện hệ thống lan can, khe co giãn và mặt cầu đang được triển khai đồng bộ. Hạng mục cầu sông Gianh còn lại 4 nhịp Super-T, 2 nhịp dầm bản 24 m và 3 bản mặt liền đúc trên đà giáo. Tất cả đều được gấp rút thi công để kịp tiến độ. Dự kiến, đến ngày 20/9, cây cầu sẽ hoàn thành và được thông xe kỹ thuật, chính thức góp phần kết nối trục giao thông huyết mạch Bắc – Nam, phục vụ lưu thông an toàn và hiệu quả.
+   section.sec-pros.ss-pd 
+      .container 
+         .pros
+            .pros-wrap 
+               .pros-head.mb-40
+                  +title("Tiến độ dự án","white title40")
+               .pros-block 
+                  .pros-slider.slideLoop
+                     .b-sw
+                        +Swiper()
+                           each i,index in Array(4)
+                              .swiper-slide.col.col-4
+                                 .pros-item
+                                    .b-head 
+                                       sapn.t-time 2024
+                                       .t-gr
+                                          span.line 
+                                          span.icon 
+                                             +img("ic-pros.png")
+                                    .b-inner
+                                       .b-ctn 
+                                          .t-head
+                                             | 08/2024
+                                          .b-content
+                                             span.t-txt Chuẩn bị
+                                             p.t-des 
+                                                | Từ một doanh nghiệp xây lắp, sau cổ phần hóa công ty đã có nhiều uy tín với chủ đầu tư, bạn hàng và người lao động. Để tạo những bước chuyển vượt bậc, Ban lãnh đạo công ty mà đứng đầu là vị Bí thư Đảng ủy, Chủ tịch Hội đồng quản trị, Tổng giám đốc Phạm Văn Khôi sau nhiều năm trăn trở, suy nghĩ đa đưa ra một quyết định táo bạo là tham gia làm Nhà đầu tư đúng với ý nghĩa tên gọi của Công ty.
+                                       .b-img 
+                                          .inner 
+                                             +img("pros-img.jpg")
+                        .pros-control
+                           +SwiperControl("pros-control-inner") 
+   section.sec-media.ss-pd 
+      .container 
+         .media 
+            .media-wrap 
+               .media-head 
+                  +title("Một số hình ảnh dự án","title40 t-center")
+            .media-block 
+               .media-masonry 
+                  .masonry
+                     .grid-sizer
+                     .gutter-sizer
+                        each i,index in Array(8)
+                           .item-masonry
+                              .inner(data-fancybox="media-img" data-src=`./assets/images/media-img (${index + 1}).jpg`)
+                                 +img(`media-img (${index + 1}).jpg`)
+   section.sec-hpj.ss-pd.custom
+      .container
+         .hpj-head.d-flex.j-bw
+            +title("Xem thêm các dự án khác")
+            +Btn("Xem tất cả")
+      .container-second 
+         .hpj
+            .hpj-wrap
+               .hbj-block 
+                  .hpj-slider.slideSw
+                     +SwiperControl("hpj-control") 
+                     .b-sw 
+                        +Swiper()
+                           each i, index in Array(4)
+                              .swiper-slide.col 
+                                 .pj-item 
+                                    a(href="").hidden-link 
+                                    .b-top 
+                                       .b-img
+                                          .tag.iwt 
+                                             span.icon 
+                                                +img("tag-ic.svg")
+                                             span.txt Hà Nội
+                                          .inner 
+                                             +img(`pj-img (${index + 1}).jpg`)
+                                       .b-abs 
+                                          .iwt 
+                                             span.icon 
+                                                +img("pj-ic (1).svg")
+                                             .t-gr 
+                                                span.text Chiều dài
+                                                span.t-num 30 Km
+                                          .iwt 
+                                             span.icon 
+                                                +img("pj-ic (2).svg")
+                                             .t-gr 
+                                                span.text Tổng giá trị
+                                                span.t-num 6700 tỷ
+                                          .iwt 
+                                             span.icon 
+                                                +img("pj-ic (3).svg")
+                                             .t-gr 
+                                                span.text Nhân sự
+                                                span.t-num 1000+
+                                          .iwt 
+                                             span.icon 
+                                                +img("pj-ic (4).svg")
+                                             .t-gr 
+                                                span.text Thời gian
+                                                span.t-num 2014 - 2018
+                                    h3.b-title
+                                       a(href="").t-link
+                                          |  DỰ ÁN ĐẦU TƯ NÂNG CẤP TUYẾN ĐƯỜNG PHÁP VÂN - CẦU GIẼ THEO HÌNH THỨC HỢP ĐỒNG BOT
+   +connect()

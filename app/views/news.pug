@@ -1,0 +1,68 @@
+extends layout/layout
+
+block vars
+    -title = ''
+    -bodyClass = 'page-news'
+
+block container
+   +bnp("bnp-news.jpg","Tin tức","Kết nối để cùng xây dựng những công trình mang dấu ấn vươn xa","Tin tức")
+   section.sec-newsp.ss-pd-t 
+      .container 
+         .newsp 
+            .newsp-wrap
+               .newsp-head.mb-40
+                  +title("Tin tức nổi bật","title40 t-center")
+               .newsp-block
+                  .newsp-slider.slideFade
+                     .b-sw.posi-rl
+                        +Swiper()
+                           each i,index in Array(3)
+                              .swiper-slide.col 
+                                 .newsp-item
+                                    .b-ctn
+                                       a(href="").t-tag
+                                          |  BẢNG TIN CÔNG TY
+                                       h3.t-text 
+                                          a(href="")  Lãnh đạo Công đoàn Xây dựng Việt Nam động viên người lao động dịp Tháng Công nhân #{index + 1}
+                                       .t-des 
+                                          p 
+                                             | Tiếp tục các hoạt động nhân dịp Tháng Công nhân và Tháng hành động về An toàn, vệ sinh lao động năm 2025, mới đây, Công đoàn Xây dựng Việt Nam đã tổ chức các đoàn công tác tới các đơn vị, doanh nghiệp, công trình trọng điểm để động viên, tặng quà người lao động.
+                                       span.t-time 20.10.2025
+                                    .b-img
+                                       .inner 
+                                          +img(`newsp-img (${index + 1}).jpg`)
+                        +SwiperControl("posi midle")
+   section.sec-news.ss-pd
+      .container 
+         .news 
+            .news-wrap 
+               .news-head.mb-40
+                  +title("Tất cả tin tức","title40 t-center")
+                  .hnews-cate 
+                     .b-slide.slideSw
+                        +Swiper()
+                           .swiper-slide.col
+                              a(href="").hnews-link.active
+                                 | TẤT CẢ 
+                           .swiper-slide.col
+                              a(href="").hnews-link
+                                 | BẢNG TIN CÔNG TY
+                           .swiper-slide.col
+                              a(href="").hnews-link
+                                 | TIN NGÀNH XÂY DỰNG
+                           .swiper-slide.col
+                              a(href="").hnews-link
+                                 | KHEN THƯỞNG
+                           .swiper-slide.col
+                              a(href="").hnews-link
+                                 | SỰ KIỆN - ĐẤU THẦU
+                           .swiper-slide.col
+                              a(href="").hnews-link
+                                 | BẢN TIN THỊ TRƯỜNG
+               .news-block
+                  .news-list.row 
+                     each i,index in Array(9)
+                        .col.col-4
+                           +news(index)
+                  +PageNumber()
+   +connect()

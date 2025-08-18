@@ -1147,3 +1147,20 @@ input[type="number"] {
     background: var(--color-pri);
   }
 }
+.tab-group {
+  display: flex;
+  justify-content: center;
+  .t-link {
+    @include fz-16;
+    padding: 1rem 2rem;
+    border-bottom: 0.2rem solid #dddddd;
+    transition: 0.3s ease-in-out;
+    &.active {
+      font-weight: 700;
+      border-color: var(--color-pri);
+    }
+    @include hover {
+      border-color: var(--color-pri);
+    }
+  }
+}
