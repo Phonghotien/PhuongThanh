@@ -284,6 +284,9 @@
 .fa-play:before {
   content: "\f04b";
 }
+.fa-arrow-up-right-from-square:before {
+  content: "\f35d";
+}
 .fa-angle-up:before {
   content: "\f106";
 }

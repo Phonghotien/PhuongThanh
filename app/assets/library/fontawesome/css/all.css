@@ -387,6 +387,9 @@
 .fa-play:before {
   content: "\f04b";
 }
+.fa-arrow-up-right-from-square:before {
+  content: "\f35d";
+}
 .fa-arrow-right:before {
   content: "\f061";
 }

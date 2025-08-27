@@ -1,0 +1,28 @@
+extends layout/layout
+
+block vars
+    -title = ''
+    -bodyClass = 'page-work'
+
+block container
+   +bnp("bnp-work.jpg","Lĩnh vực hoạt động","Công trình chất lượng – Dấu ấn trên mọi nẻo đường.","Lĩnh vực hoạt động")
+   section.sec-hw.ss-pd 
+      .container 
+         .hw
+            .hw-wrap 
+               .hw-head.mb-40
+                  +title("Lĩnh vực hoạt động","title40 t-center")
+               .hw-block
+                  .hw-list.row 
+                     each i,index in Array(8)
+                        .col.col-3
+                           .hw-it 
+                              .box-img 
+                                 .inner 
+                                    +img(`hw-img (${index + 1}).jpg`)
+                              .box-ctn 
+                                 .b-abs
+                                    span.icon 
+                                       +img(`hw-ic (${index + 1}).svg`)
+                                    span.t-txt XÂY DỰNG CẦU ĐƯỜNG
+   +connect()

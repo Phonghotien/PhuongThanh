@@ -336,8 +336,8 @@
     input {
       &:checked {
         ~ .txt {
-          color: var(--color-pri);
-          border-color: var(--color-pri);
+          color: var(--color-white);
+          background: var(--color-pri);
           .num {
             --cl-num: var(--color-pri);
           }
@@ -345,11 +345,10 @@
       }
     }
     .txt {
-      padding: 0.8rem;
-      border-radius: 0.4rem;
-      border: 0.1rem solid var(--cl-border);
-      color: var(--color-text);
-      background: var(--color-white);
+      padding: 1.2rem 2.4rem;
+      background: #eeeeee;
+      color: #4e4e4e;
+      font-weight: 700;
     }
   }
   &.tag-text {

@@ -6,6 +6,7 @@
   text-wrap: pretty;
   position: relative;
   font-weight: 700;
+  @include font-second;
 }
 .head {
   display: flex;

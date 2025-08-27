@@ -2,6 +2,86 @@
 .progress-wrap.backToTop
   svg.progress-circle.svg-content(width='100%' height='100%' viewbox='-1 -1 102 102')
     path(d='M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98')
++popup("popup-mem open","popup-mem-id")
+   .popup-mem-maim 
+      .b-head.mb-24
+         +title("Thành viên","title40 t-center")
+      .popup-mem-panel.tabJS
+         .popup-mem-tab.mb-40
+            .b-tab-item.tabBtn
+               span.txt ĐẠI HỘI CỔ ĐÔNG
+            .b-tab-item.tabBtn
+               span.txt HỘI ĐỒNG QUẢN TRỊ
+            .b-tab-item.tabBtn
+               span.txt BAN KIỂM SOÁT
+         .popup-mem-wrappper
+            .popup-mem-block.tabPanel
+               .popup-mem-list.row 
+                  each i,index in Array(6)
+                     .col.col-4 
+                        .popup-mem-item
+                           .b-ctn 
+                              span.text Ông Vũ Ngọc Oánh 
+                              span.txt CHỦ TỊCH HDQT, TỔNG GIÁM ĐỐC
+                           .b-img 
+                              .inner 
+                                 +img("mem (1).png")
+            .popup-mem-block.tabPanel
+               .popup-mem-list.row 
+                  each i,index in Array(6)
+                     .col.col-4 
+                        .popup-mem-item
+                           .b-ctn 
+                              span.text Ông Vũ Ngọc Oánh 
+                              span.txt CHỦ TỊCH HDQT, TỔNG GIÁM ĐỐC
+                           .b-img 
+                              .inner 
+                                 +img("mem (1).png")
+            .popup-mem-block.tabPanel
+               .popup-mem-list.row 
+                  each i,index in Array(6)
+                     .col.col-4 
+                        .popup-mem-item
+                           .b-ctn 
+                              span.text Ông Vũ Ngọc Oánh 
+                              span.txt CHỦ TỊCH HDQT, TỔNG GIÁM ĐỐC
+                           .b-img 
+                              .inner 
+                                 +img("mem (1).png")
++popup("popup-doc","popup-doc-id")
+   .popup-doc-main
+      .popup-doc-head
+         .popup-doc-py
+            .d-flex.a-center.gap40
+               .b-left 
+                  .b-ctn 
+                     span.icon-quote 
+                        +img("quote.svg")
+                     .t-des 
+                        p 
+                           | Có lẽ chúng tôi thành công là vì người Phương Thành Tranconsin    vẫn đối xử với nhau như những người nhà nước, hay nói cách khác, chúng tôi vẫn luôn duy trì được niềm tin vào sự tử tế của các cộng sự - vốn là các đảng viên lão thành.
+               .b-right
+                  .b-img 
+                     .inner 
+                        +img("mem (2).png")
+                     .b-pos 
+                        span.text Ông Vũ Ngọc Oánh 
+                        span.txt CHỦ TỊCH HDQT, TỔNG GIÁM ĐỐC
+      .popup-doc-body 
+         .popup-doc-py
+            .popup-doc-wrap
+               .b-content 
+                  .mona-content 
+                     h3.c-sec.fw-7.t24 Tiểu sử
+                     p 
+                        | Ông Phạm Văn Khôi, Chủ tịch HĐQT, Tổng giám đốc Công ty cổ phần Đầu tư và Xây dựng giao thông Phương Thành (Phương Thành Tranconsin), sau gần 15 năm, vẫn còn nhớ như in ngày được Bộ trưởng Bộ Giao thông - Vận tải ký quyết định điều động làm Phó giám đốc Công ty Xây dựng và Dịch vụ giao thông vận tải (Tranconsin - doanh nghiệp tiền thân).
+                     p 
+                        | Từ cán bộ có vai vế tại một doanh nghiệp lớn trong ngành được điều làm phó giám đốc một doanh nghiệp đoàn thể trực thuộc Công đoàn Giao thông - Vận tải Việt Nam có quy mô vốn chỉ dăm tỷ đồng, với hơn 40 cán bộ lao động, trụ sở đi thuê, bé như chuồng chim cu, sản phẩm là đường giao thông nông thôn, đường cấp thấp, có thể coi đây là cú sốc đối với ông Khôi.
+                     h3.c-sec.fw-7.t24 Những Bước Đi Đầu Tiên Trong Khởi Nghiệp
+                     p 
+                        | Ông Phạm Văn Khôi, Chủ tịch HĐQT, Tổng giám đốc Công ty cổ phần Đầu tư và Xây dựng giao thông Phương Thành (Phương Thành Tranconsin), sau gần 15 năm, vẫn còn nhớ như in ngày được Bộ trưởng Bộ Giao thông - Vận tải ký quyết định điều động làm Phó giám đốc Công ty Xây dựng và Dịch vụ giao thông vận tải (Tranconsin - doanh nghiệp tiền thân).
+                     p 
+                        | Từ cán bộ có vai vế tại một doanh nghiệp lớn trong ngành được điều làm phó giám đốc một doanh nghiệp đoàn thể trực thuộc Công đoàn Giao thông - Vận tải Việt Nam có quy mô vốn chỉ dăm tỷ đồng, với hơn 40 cán bộ lao động, trụ sở đi thuê, bé như chuồng chim cu, sản phẩm là đường giao thông nông thôn, đường cấp thấp, có thể coi đây là cú sốc đối với ông Khôi.
 script(src='./assets/library/jquery/jquery.js')
 script(src='./assets/library/swiper/swiper-bundle.min.js')
 script(src='./assets/library/aos/aos.js')

@@ -572,11 +572,11 @@
   -o-clip-path: $string;
 }
 
-@mixin font-pri($name: "Inter") {
+@mixin font-pri($name: "Roboto") {
   font-family: $name, sans-serif;
 }
 
-@mixin font-second($name: "Inter") {
+@mixin font-second($name: "Montserrat") {
   font-family: $name, sans-serif;
 }
 

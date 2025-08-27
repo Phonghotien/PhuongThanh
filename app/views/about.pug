@@ -1,0 +1,279 @@
+extends layout/layout
+
+block vars
+    -title = ''
+    -bodyClass = 'page-about'
+
+block container
+   +bnp("bnp-about.jpg","Về chúng tôi","Hơn 20 năm kiến tạo – Vững bước vì hạ tầng quốc gia.","Về chúng tôi")
+   section.sec-abi
+      .abi-bg 
+         +img("abi-bg.jpg")
+      .container 
+         .abi 
+            .abi-wrap 
+               .abi-head 
+                  +img("abi-logo.png")
+               .abi-content 
+                  .mona-content 
+                     p 
+                        | Công ty Cổ phần Đầu tư và Xây dựng Giao thông Phương Thành (Phương Thành Tranconsin) được thành lập năm 1999, là một trong những doanh nghiệp tiên phong trong lĩnh vực đầu tư và xây dựng hạ tầng giao thông tại Việt Nam. Với hơn 20 năm hình thành và phát triển, công ty đã khẳng định vị thế hàng đầu trong việc thi công các công trình trọng điểm quốc gia, đặc biệt là các tuyến đường cao tốc hiện đại.  Phương Thành hoạt động với phương châm 
+                        span.fw-7 “Chân thành – Trách nhiệm – Trung thực – Hiệu quả” 
+                        | , lấy chữ Tâm làm nền tảng và chữ Tín làm kim chỉ nam, luôn cam kết mang đến những công trình chất lượng, an toàn và đúng tiến độ.
+   section.sec-abn.ss-pd 
+      .abn-bg 
+         +img("abn-bg.jpg")
+      .container 
+         .abn 
+            .abn-wrap 
+               .abn-head.mb-40
+                  +title("Những con số ấn tượng","title40")
+               .abn-block 
+                  .abn-panel
+                     .abn-list.row 
+                        .col.col-3 
+                           .abn-it 
+                              .b-inner 
+                                 .t-head 
+                                    span.t-num.countNum 03
+                                 .t-bot 
+                                    span.txt Đơn vị thành viên cơ cấu tổ chức
+                        .col.col-3 
+                           .abn-it 
+                              .b-inner 
+                                 .t-head 
+                                    span.t-num.countNum 1740 
+                                    span.t-txt tỷ đồng
+                                 .t-bot 
+                                    span.txt Doanh thu 2018
+                        .col.col-3 
+                           .abn-it 
+                              .b-inner 
+                                 .t-head 
+                                    span.t-num.countNum 1200
+                                 .t-bot 
+                                    span.txt Nhân viên bao gồm các công ty thành viên
+                        .col.col-3 
+                           .abn-it 
+                              .b-inner 
+                                 .t-head 
+                                    span.t-num.countNum 120 
+                                    span.t-txt km
+                                 .t-bot 
+                                    span.txt Đường cao tốc đã thi công
+               .abn-des 
+                  p 
+                     | Công ty Cổ phần Đầu tư và Xây dựng Giao thông Phương Thành (Phương Thành Tranconsin) được thành lập năm 1999, là một trong những doanh nghiệp tiên phong trong lĩnh vực đầu tư và xây 
+   section.sec-hbi.ss-pd 
+      .container 
+         .hbi 
+            .hbi-wrap 
+               .hbi-panel 
+                  .b-head 
+                     +title("Về Phương Thành")
+                  .b-panel 
+                     .iwt 
+                        span.icon 
+                           +img("hbi-ic (1).svg")
+                        .t-gr 
+                           span.text TẦM NHÌN 
+                           .t-des 
+                              p 
+                                 | Phấn đấu trở thành doanh nghiệp hàng đầu trong lĩnh vực đầu tư và xây dựng hạ tầng giao thông, đặc biệt là các tuyến cao tốc trọng điểm.
+                              p 
+                                 | Phương Thành hướng đến phát triển bền vững, uy tín, vươn tầm khu vực, góp phần hiện đại hóa hệ thống giao thông quốc gia.
+                     .iwt 
+                        span.icon 
+                           +img("hbi-ic (2).svg")
+                        .t-gr 
+                           span.text TẦM NHÌN 
+                           .t-des
+                              p 
+                                 | Cung cấp các công trình giao thông chất lượng cao, hiệu quả, đúng tiến độ. Phương Thành hoạt động dựa trên giá trị cốt lõi:
+                              p.fw-7
+                                 | “Chân thành – Trách nhiệm – Trung thực – Hiệu quả, lấy Tâm làm nền tảng, giữ vững uy tín với đối tác, khách hàng và cộng đồng.”
+               .hbi-dcor 
+                  .inner 
+                     +img("hbi-dc.png")
+            .hbi-box
+               .b-dcor 
+                  +img("hbi-dc2.png")
+               .t-head 
+                  span.txt PHƯƠNG THÀNH TRANCOSSIN
+               .b-gr 
+                  span.t-dc thi công
+                  span.t-num 45
+                  span.txt Tỉnh thành trên khắp cả nước
+   .sec-abv
+      .abv-bg 
+         +img("abv-bg.jpg")
+      .container 
+         .abv
+            .abv-wrap 
+               .abv-panel 
+                  .abv-head 
+                     +title("Giá trị cốt lõi","title40 white")
+                  .abv-block 
+                     .abv-list.row 
+                        .col.col-3 
+                           .abv-it
+                              .b-head 
+                                 span.icon 
+                                    +img("abv-ic (1).svg")
+                                 .t-gr 
+                                    span.t-num 01
+                                    span.txt Chân thành
+                              .b-des 
+                                 p 
+                                    | Minh bạch, thiện chí trong mọi quan hệ, lắng nghe và chia sẻ để xây dựng niềm tin.
+                        .col.col-3 
+                           .abv-it
+                              .b-head 
+                                 span.icon 
+                                    +img("abv-ic (2).svg")
+                                 .t-gr 
+                                    span.t-num 02
+                                    span.txt  Trách nhiệm
+                              .b-des 
+                                 p Đúng tiến độ, đảm bảo chất lượng và an toàn, góp phần tạo giá trị bền vững.
+                        .col.col-3 
+                           .abv-it
+                              .b-head 
+                                 span.icon 
+                                    +img("abv-ic (3).svg")
+                                 .t-gr 
+                                    span.t-num 03
+                                    span.txt Trung thực
+                              .b-des 
+                                 p Giữ uy tín bằng hành động, minh bạch thông tin và cam kết rõ ràng.
+                        .col.col-3 
+                           .abv-it
+                              .b-head 
+                                 span.icon 
+                                    +img("abv-ic (4).svg")
+                                 .t-gr 
+                                    span.t-num 04
+                                    span.txt Hiệu quả
+                              .b-des 
+                                 p  Tối ưu nguồn lực, áp dụng công nghệ để mang lại kết quả vượt mong đợi.
+   section.sec-abh.ss-pd 
+      .container 
+         .abh
+            .abh-wrap
+               .abh-head.mb-40
+                  +title("Lịch sử hình thành","title40 white t-center")
+               .abh-block 
+                  .abh-panel 
+                     .abh-slider 
+                        .b-sw.slideSw
+                           +Swiper()
+                              each i,index in Array(4)
+                                 .swiper-slide.col
+                                    .abh-it 
+                                       .b-inner 
+                                          .col-left 
+                                             .b-ctn 
+                                                .t-head 
+                                                   span.t-num 202#{index + 1}
+                                                .b-body 
+                                                   h3.t-text Bứt phá trong xây dựng và là nhà đầu tư
+                                                   .t-des 
+                                                      p 
+                                                         | Từ một doanh nghiệp xây lắp, sau cổ phần hóa công ty đã có nhiều uy tín với chủ đầu tư, bạn hàng và người lao động. Để tạo những bước chuyển vượt bậc, Ban lãnh đạo công ty mà đứng đầu là vị Bí thư Đảng ủy, Chủ tịch Hội đồng quản trị, Tổng giám đốc Phạm Văn Khôi sau nhiều năm trăn trở, suy nghĩ đa đưa ra một quyết định táo bạo là tham gia làm Nhà đầu tư đúng với ý nghĩa tên gọi của Công ty.
+                                          .col-right
+                                             .b-img 
+                                                .inner 
+                                                   +img("abh-img (1).jpg")
+                                       .b-bot 
+                                          .t-gr 
+                                             span.num 202#{index + 1}
+                                             span.icon 
+                                                +img("ic-pros.png")
+   section.sec-sitemap.ss-pd
+      .container 
+         .sitemap
+            .sitemap-wrap 
+               .sitemap-head
+                  +title("Sitemap","title40 white t-center")
+               .sitemap-block
+                  .sitemap-img(data-fancybox data-src="./assets/images/sitemap-img.svg")
+                     +img("sitemap-img.svg")
+   section.sec-achi.ss-pd 
+      .container 
+         .achi 
+            .achi-wrap 
+               .achi-head.mb-40
+                  +title("Chứng nhận - Thành tích","title40 white")
+               .achi-block 
+                  .achi-slider.slideCenter
+                     .b-sw.posi-rl
+                        +Swiper()
+                           each i,index in Array(4)
+                              .swiper-slide.col
+                                 .achi-it
+                                    .inner
+                                       +img("achi-img.jpg")
+                                    .b-ctn 
+                                       h3.t-text Huân chương lao động Hạng ba
+                                       .t-des 
+                                          p 
+                                             | Được Chủ tịch nước trao tặng năm 2016 cho tập thể công ty Phương Thành Tranconsin
+                        +SwiperControl("posi achi-control")
+   section.sec-cap.ss-pd 
+      .cap-dcor 
+         +img("cap-dcor.svg")
+      .cap-dcor2 
+         +img("cap-dcor2.svg")
+      .container 
+         .cap 
+            .cap-wrap 
+               .cap-head.t-center
+                  +title("Năng lực - Công nghệ","title40")
+                  .t-des 
+                     p 
+                        | Phương Thành là đơn vị hàng đầu trong lĩnh vực xây dựng giao thông tại Việt Nam, sở hữu đội ngũ kỹ sư, công nhân giàu kinh nghiệm cùng hệ thống máy móc, thiết bị hiện đại. Chúng tôi luôn tiên phong ứng dụng công nghệ mới, quy trình quản lý chất lượng nghiêm ngặt để đảm bảo tiến độ, chất lượng và an toàn cho mọi công trình.
+               .cap-block
+                  .cap-panel 
+                     .cap-logo
+                        +img("cap-logo.svg")
+                     .cap-bot 
+                        .cap-row.row 
+                           .col.col-6 
+                              .cap-it
+                                 .b-inner 
+                                    .b-img
+                                       .inner 
+                                          +img("cap-img (1).jpg")
+                                    .b-ctn 
+                                       span.text Năng lực
+                                       .t-des 
+                                          p 
+                                             | Phương Thành đã thi công nhiều dự án giao thông trọng điểm quốc gia như cao tốc Vũng Áng – Bùng, cầu sông Gianh, Nội Bài – Lào Cai… với tiến độ nhanh, chất lượng cao và chi phí tối ưu.
+                           .col.col-6 
+                              .cap-it
+                                 .b-inner 
+                                    .b-img
+                                       .inner 
+                                          +img("cap-img (2).jpg")
+                                    .b-ctn 
+                                       span.text Công nghệ
+                                       .t-des 
+                                          p 
+                                             | Ứng dụng công nghệ đúc hẫng cân bằng, Super-T girder, dầm bản dự ứng lực và hệ thống quản lý chất lượng ISO, đảm bảo độ chính xác, an toàn và độ bền vượt trội cho mọi công trình.
+   section.sec-sfile 
+      .container 
+         .sfile 
+            .sfile-wrap
+               .sfile-head
+                  +title("Hồ sơ năng lực","title40 white")
+               .sfile-block
+                  .sfile-panel 
+                     .sfile-des 
+                        p 
+                           | Phương Thành là đơn vị hàng đầu trong lĩnh vực xây dựng giao thông tại Việt Nam, sở hữu đội ngũ kỹ sư, công nhân giàu kinh nghiệm cùng hệ thống máy móc, thiết bị hiện đại. 
+                     .d-flex.gap24
+                        +Btn("Xem ngay","","white")
+                        +Btn("Tải về")
+                  .sfile-dcor
+                     +img("sfile-img.jpg")
+   +connect()

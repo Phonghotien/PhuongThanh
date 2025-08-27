@@ -95,4 +95,25 @@
       display: flex;
     }
   }
+  &-bot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8rem;
+    @include max(500px) {
+      flex-direction: column;
+    }
+  }
+  &-sign {
+    flex: 1;
+    &::after {
+      content: "";
+      flex: 1;
+      height: 0.1rem;
+      background: var(--color-pri);
+      @include max(500px) {
+        display: none;
+      }
+    }
+  }
 }

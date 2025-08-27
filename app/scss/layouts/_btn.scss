@@ -39,7 +39,7 @@
 
   &.white {
     background: var(--color-white);
-    color: #151515;
+    color: var(--color-pri);
   }
 
   @include max(1200px) {

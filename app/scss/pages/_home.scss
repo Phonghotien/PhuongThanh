@@ -742,17 +742,26 @@
   }
 }
 .hnews-link {
-  color: #4e4e4e;
-  @include fz-16;
-  display: inline-block;
-  padding: 0.8rem 1.6rem;
-  text-align: center;
-  &.active {
-    color: var(--color-pri);
-    border-bottom: 0.2rem solid var(--color-pri);
+  .txt {
+    color: #4e4e4e;
+    @include fz-16;
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    text-align: center;
   }
+  input {
+    &:checked {
+      ~ .txt {
+        color: var(--color-pri);
+        border-bottom: 0.2rem solid var(--color-pri);
+      }
+    }
+  }
+
   @include hover {
-    color: var(--color-pri);
+    .txt {
+      color: var(--color-pri);
+    }
   }
 }
 

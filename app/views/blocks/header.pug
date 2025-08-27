@@ -57,9 +57,46 @@ header.hd(class=hdClass)
                            li.menu-item 
                               a(href="").menu-link 
                                  | PHẦN MỀM QUẢN LÝ
-                  .hd-search
+                  .hd-search.searchJS
                      span.icon-search 
                         +img("ic-search.svg")
+                  .hd-search-box.searchPanel
+                     .hd-search-wrap
+                        .hd-search-form
+                           form.form-inner(action='')
+                              input.hd-search-ip(type='text' placeholder="Nhập nội dung tìm kiếm ...")
+                              input.hd-search-btn(type='submit')
+                        .hd-search-his
+                           p.t18.fw-7 Tìm kiếm nổi bật
+                           .hd-search-suggest
+                              .hd-search-suggest-item
+                                 p.t-text
+                                    | Lĩnh vực hoạt động
+                                 .hd-search-suggest-list
+                                    a.t-link(href='')
+                                       span.icon
+                                          i.fa-light.fa-arrow-up-right-from-square
+                                       | Xây dựng cầu đường
+                                    a.t-link(href='')
+                                       span.icon
+                                          i.fa-light.fa-arrow-up-right-from-square
+                                       |  Tư vấn thiết kế
+                                    a.t-link(href='')
+                                       span.icon
+                                          i.fa-light.fa-arrow-up-right-from-square
+                                       | Thí nghiệm công trình xây dựng
+                              .hd-search-suggest-item
+                                 p.t-text
+                                    | Dự án
+                                 .hd-search-suggest-list
+                                    a.t-link(href='')
+                                       span.icon
+                                          i.fa-light.fa-arrow-up-right-from-square
+                                       | DỰ ÁN ĐẦU TƯ NÂNG CẤP TUYẾN ĐƯỜNG PHÁP VÂN - CẦU GIẼ THEO HÌNH THỨC HỢP ĐỒNG BOT
+                                    a.t-link(href='')
+                                       span.icon
+                                          i.fa-light.fa-arrow-up-right-from-square
+                                       | GÓI THẦU XDCT 07 VÀ XDCT 08 VÀ GÓI AN TOÀN GIAO THÔNG - DỰ ÁN ĐƯỜNG CAO TỐC HẠ LONG -VÂN ĐỒN
    .mobile-overlay
    .mobile
       .container

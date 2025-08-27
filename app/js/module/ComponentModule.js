@@ -43,8 +43,7 @@ export default function ComponentModule() {
   //   })(jQuery);
   //   Scroll to section
   window.addEventListener("load", function () {
-    const speed = 0;
-
+    const speed = 100;
     const hash = window.location.hash;
     if ($(hash).length) scrollToID(hash, speed);
 

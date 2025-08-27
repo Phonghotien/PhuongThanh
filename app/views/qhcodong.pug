@@ -16,29 +16,41 @@ block container
                      .b-slide.slideSw
                         +Swiper()
                            .swiper-slide.col
-                              a(href="").hnews-link.active
-                                 | TẤT CẢ 
+                              label(for="hnews-cate-1").hnews-link
+                                 input(type="radio" id="hnews-cate-1" name="hnews-cate" value="1" hidden )
+                                 span.txt
+                                    | TẤT CẢ 
                            .swiper-slide.col
-                              a(href="").hnews-link
-                                 | CÔNG BỐ THÔNG TIN
+                              label(for="hnews-cate-2").hnews-link
+                                 input(type="radio" id="hnews-cate-2" name="hnews-cate" value="2" hidden)
+                                 span.txt
+                                    | CÔNG BỐ THÔNG TIN
                            .swiper-slide.col
-                              a(href="").hnews-link
-                                 | BÁO CÁO TÀI CHÍNH
+                              label(for="hnews-cate-3").hnews-link
+                                 input(type="radio" id="hnews-cate-3" name="hnews-cate" value="3" hidden)
+                                 span.txt
+                                    | BÁO CÁO TÀI CHÍNH
                            .swiper-slide.col
-                              a(href="").hnews-link
-                                 | BÁO CÁO THƯỜNG NIÊN
+                              label(for="hnews-cate-4").hnews-link
+                                 input(type="radio" id="hnews-cate-4" name="hnews-cate" value="4" hidden)
+                                 span.txt
+                                    | BÁO CÁO THƯỜNG NIÊN
                            .swiper-slide.col
-                              a(href="").hnews-link
-                                 | THÔNG TIN QUẢN TRỊ
+                              label(for="hnews-cate-5").hnews-link
+                                 input(type="radio" id="hnews-cate-5" name="hnews-cate" value="5" hidden)
+                                 span.txt
+                                    | THÔNG TIN QUẢN TRỊ
                            .swiper-slide.col
-                              a(href="").hnews-link
-                                 | ĐẠI HỘI CỔ ĐÔNG
+                              label(for="hnews-cate-6").hnews-link
+                                 input(type="radio" id="hnews-cate-6" name="hnews-cate" value="6" hidden)
+                                 span.txt
+                                    | ĐẠI HỘI CỔ ĐÔNG
                   .hold-tag.d-flex.j-center
-                     a(href="").b-tag 2021
-                     a(href="").b-tag 2022
-                     a(href="").b-tag 2023 
-                     a(href="").b-tag 2024 
-                     a(href="").b-tag 2025
+                     +Checker("radio","tag","2021","tag-box","hnews-tag")
+                     +Checker("radio","tag","2022","tag-box","hnews-tag")
+                     +Checker("radio","tag","2023","tag-box","hnews-tag")
+                     +Checker("radio","tag","2024","tag-box","hnews-tag")
+                     +Checker("radio","tag","2025","tag-box","hnews-tag")
                .hold-block 
                   .hold-list 
                      each i,index in Array(6)
