@@ -332,6 +332,9 @@
 .fa-arrow-right:before {
   content: "\f061";
 }
+.fa-arrow-right-long:before {
+  content: "\f178";
+}
 .fa-search:before {
   content: "\f002";
 }

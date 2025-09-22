@@ -6,7 +6,7 @@ export default function CountUpModule() {
   function startCountUp(v) {
     let n = parseInt(v.textContent.replace(/\./g, "")) || 0;
     let countUp = new CountUp(v, n, {
-      separator: ".",
+      separator: ",",
       decimal: ".",
       duration: 3,
     });

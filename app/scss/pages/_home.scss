@@ -157,7 +157,7 @@
     }
   }
   &-panel {
-    width: 35%;
+    width: 40%;
     @include max(768px) {
       width: 100%;
     }
@@ -170,6 +170,9 @@
       padding-bottom: 2.4rem;
       margin-bottom: 2.4rem;
       border-bottom: 0.1rem solid rgba(0, 0, 0, 0.1);
+      .t-title {
+        @include fz-40;
+      }
     }
     .iwt {
       --iz: 6.4rem;
@@ -436,6 +439,7 @@
       padding: 0.4rem;
       .icon {
         @include mid-flex;
+        width: 5.4rem;
         @include max(768px) {
           width: 3.6rem;
         }
@@ -561,7 +565,8 @@
       }
     }
     .icon-quote {
-      @include mid-flex;
+      display: flex;
+      width: 4rem;
       @include max(1200px) {
         width: 3.2rem;
       }
@@ -868,4 +873,26 @@
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
+}
+.prj-info-content {
+  .content-has-img {
+    margin-top: 2.4rem;
+  }
+  .item-content {
+    display: flex;
+    gap: 1.2rem;
+    &:not(:last-child) {
+      margin-bottom: 1.2rem;
+    }
+    img {
+      display: block;
+      width: 1.6rem;
+      flex-shrink: 0;
+      object-fit: contain;
+      height: 1.6rem;
+    }
+    p {
+      margin: 0;
+    }
+  }
 }

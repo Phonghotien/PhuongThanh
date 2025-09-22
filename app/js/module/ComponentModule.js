@@ -15,6 +15,18 @@ export default function ComponentModule() {
       });
     });
   }
+  document.querySelectorAll(".fileInput").forEach(function (fileInput) {
+    fileInput.addEventListener("change", function (event) {
+      var fileNameDisplay =
+        fileInput.parentElement.nextElementSibling.querySelector(".txt");
+      fileNameDisplay.textContent = "";
+      if (event.target.files.length > 0) {
+        var file = event.target.files[0];
+        fileNameDisplay.textContent = file.name;
+        fileNameDisplay.classList.add("c-white");
+      }
+    });
+  });
   //   Copy
   var temp = $("<input>");
   temp.addClass("inputURL");
@@ -185,14 +197,4 @@ export default function ComponentModule() {
       priceMax.innerHTML = maxVal;
     });
   }
-  document.querySelectorAll(".fileInput").forEach(function (fileInput) {
-    fileInput.addEventListener("change", function (event) {
-      var fileNameDisplay = fileInput.parentElement.nextElementSibling;
-      fileNameDisplay.textContent = "";
-      if (event.target.files.length > 0) {
-        var file = event.target.files[0];
-        fileNameDisplay.textContent = file.name;
-      }
-    });
-  });
 }

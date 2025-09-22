@@ -1,8 +1,76 @@
-
 .progress-wrap.backToTop
   svg.progress-circle.svg-content(width='100%' height='100%' viewbox='-1 -1 102 102')
     path(d='M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98')
-+popup("popup-mem open","popup-mem-id")
+.social-fixed 
+   a(href="").ic-link
+      +img("ic-fb.png") 
+   a(href="").ic-link
+      +img("ic-viper.png") 
+   a(href="").ic-link
+      +img("ic-zalo.png")
+   a(href="").ic-link
+      +img("ic-mess.png")
++popup("popup-ct","popup-price-id")
+   .popup-ct-main
+      .t-head 
+         .head.t-center
+            .t-title
+               | Gửi báo giá
+      .b-panel 
+         .b-form 
+            form(action="")
+               .form-list.row
+                  .col.form-ip
+                     input(type="text" placeholder="Họ và tên")
+                  .col.form-ip.col-6
+                     input(type="text" placeholder="Email")
+                  .col.form-ip.col-6
+                     input(type="text" placeholder="Số điện thoại")
+                  .col.form-ip
+                     input(type="text" placeholder="Tên công ty")
+                  .col.form-ip
+                     .b-select 
+                        select(name="").re-select-main
+                           option(value="") Chọn sản phẩm cần báo giá
+                           option(value="") 1
+                           option(value="") 2
+                  .col.form-ip 
+                     .form-file
+                        .form-group
+                           span.wpcf7-form-control-wrap(data-name="your-file")
+                              input(id="file-send" type="file" name="your-file" class="wpcf7-form-control wpcf7-file wpcf7-validates-as-required fileInput")
+                           label(for="file-send" class="filename")
+                              .t-gr 
+                                 span.icon
+                                    +img("upload2.svg")
+                                 span.txt Đính kèm file báo giá chi tiết (nếu có)
+                  .col.form-ip
+                     textarea(name="" placeholder="Nội dung")
+               .b-submit
+                  +Btn("Liên hệ với chúng tôi","button","center")
++popup("popup-ct","popup-ct-id")
+   .popup-ct-main
+      .t-head 
+         .head.t-center
+            .t-title
+               | Liên hệ với chúng tôi
+      .b-panel 
+         .b-form 
+            form(action="")
+               .form-list.row
+                  .col.form-ip
+                     input(type="text" placeholder="Họ và tên")
+                  .col.form-ip.col-6
+                     input(type="text" placeholder="Email")
+                  .col.form-ip.col-6
+                     input(type="text" placeholder="Số điện thoại")
+                  .col.form-ip
+                     input(type="text" placeholder="Tên công ty")
+                  .col.form-ip
+                     textarea(name="" placeholder="Nội dung")
+               .b-submit
+                  +Btn("Liên hệ với chúng tôi","button","center")
++popup("popup-mem","popup-mem-id")
    .popup-mem-maim 
       .b-head.mb-24
          +title("Thành viên","title40 t-center")
@@ -82,6 +150,12 @@
                         | Ông Phạm Văn Khôi, Chủ tịch HĐQT, Tổng giám đốc Công ty cổ phần Đầu tư và Xây dựng giao thông Phương Thành (Phương Thành Tranconsin), sau gần 15 năm, vẫn còn nhớ như in ngày được Bộ trưởng Bộ Giao thông - Vận tải ký quyết định điều động làm Phó giám đốc Công ty Xây dựng và Dịch vụ giao thông vận tải (Tranconsin - doanh nghiệp tiền thân).
                      p 
                         | Từ cán bộ có vai vế tại một doanh nghiệp lớn trong ngành được điều làm phó giám đốc một doanh nghiệp đoàn thể trực thuộc Công đoàn Giao thông - Vận tải Việt Nam có quy mô vốn chỉ dăm tỷ đồng, với hơn 40 cán bộ lao động, trụ sở đi thuê, bé như chuồng chim cu, sản phẩm là đường giao thông nông thôn, đường cấp thấp, có thể coi đây là cú sốc đối với ông Khôi.
+//- .pre-loader.loaderJs
+//-    .pre-loader-inner
+//-       .pre-loader-logo 
+//-          +img("logo-pre.png")
+//-       .pre-loader-progress
+//-          .line-progress
 script(src='./assets/library/jquery/jquery.js')
 script(src='./assets/library/swiper/swiper-bundle.min.js')
 script(src='./assets/library/aos/aos.js')

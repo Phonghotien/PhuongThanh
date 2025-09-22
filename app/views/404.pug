@@ -1,0 +1,21 @@
+extends layout/layout
+
+block vars
+    -title = ''
+    -bodyClass = 'page-career'
+
+block container
+   .page-error
+      .b-img 
+         +img("404.jpg")
+      .b-wrap 
+         .b-panel 
+            .t-head 
+               span.t-num 404
+               .t-des 
+                  p 
+                     | Trang bạn đang tìm kiếm không tồn tại.
+                     br
+                     | Vui lòng kiểm tra lại đường dẫn hoặc quay về trang chủ.
+            +Btn("Về trang chủ","","center")
+   +connect()

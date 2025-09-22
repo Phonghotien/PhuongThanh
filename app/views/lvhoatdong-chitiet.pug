@@ -5,49 +5,66 @@ block vars
     -bodyClass = 'page-work-detail'
 
 block container
-   +bnp("bnp-work-detail.jpg","Thí nghiệm công trình xây dựng","Công trình chất lượng – Dấu ấn trên mọi nẻo đường.","Thí nghiệm công trình xây dựng")
+   .bn-news.ss-pd-t
+      .container
+         .b-panel 
+            +breadCrumb(["Tin tức","Thí nghiệm công trình xây dựng"])
+            h1.t-text Thí nghiệm công trình xây dựng
    section.sec-work-detail.ss-pd 
       .container 
          .work-detail
             .work-detail-wrap 
-               .work-detail-head.mb-40
-                  +title("Thông tin chung","title40")
+               .work-detail-head
+                  .hab-panel
+                     .hab-list.row 
+                        .col.col-4
+                           .hab-image 
+                              .inner 
+                                 +img("hab-img.jpg") 
+                        .col.col-7
+                           .hab-content
+                              h2.c-pri.t40.fw-7 Thông tin chung
+                              .b-des
+                                 .mona-content 
+                                    p 
+                                       | Được thành lập từ năm 1999, đến nay 
+                                       span.fw-7 Phương Thành Tranconsin
+                                       | đã có 20 năm hình thành và phát triển.
+                                    p 
+                                       | Thực hiện chủ trương của Nhà nước, của Chính phủ nói chung và Bộ GTVT nói riêng, năm 2004, Phương Thành là một trong những doanh nghiệp tiên phong cổ phần hóa và nằm trong số rất ít những doanh nghiệp thành công sau cổ phần hóa.
+                                    p Sau 20 năm thành lập và 15 năm cổ phần, Phương Thành có thể tự hào khẳng định được vị thế là một trong những doanh nghiệp lớn của Bộ GTVT trong lĩnh vực đầu tư và xây dựng các công trình giao thông và đặc biệt là các tuyến đường cao tốc trọng điểm của đất nước.
                .work-detail-block
-                  .work-detail-panel 
-                     .work-detail-panel-head
-                        p 
-                           | Công ty TNHH Một thành viên Đầu tư Xây dựng Khai thác mỏ Thuận Phát. Công ty Thuận Phát ( Mỏ đá Phú Mãn 2) thuộc xã Phú Mãn, huyện Quốc Oai, thành phố Hà Nội, cách Trung tâm Hà Nội 30km theo hướng đại lộ Thăng Long, QL6, cách Cảng Sơn Tây 30 km theo QL 21, thuận tiện giao thông. Công ty Thuận Phát trực tiếp quản lý điều hành sản xuất khu mỏ với diện tích 23,5 ha, trữ lượng 5 triệu m3 đá Bazan xanh cường độ 1200Kg/cm2 trở lên. Công ty có hơn 40 CNLĐ làm việc gián tiếp, trực tiếp, với đội ngũ lao động lành nghề và dây chuyển sản xuất hiện đại, đồng bộ với 3 dàn máy nghiền: 01 dàn máy nghiền 350T/h công nghệ hiện đại, 01 dàn máy nghiền D250T/h công nghệ Nhật Bản, 01 dàn máy VSI (máy vo) kết nối cùng công nghệ dàn D350T/h. Sản lượng hàng năm đạt trên 450.000 tấn các loại sản phẩm như đá hộc, đá 20 x 40, đá 10 x 20, đá 05 x 10, đá 0 x 5 và các sản phẩm đá theo tiêu chuẩn của các dự án khác. Sản phẩm đá của Công ty sản xuất đạt tiêu chuẩn chất lượng cao phục vụ các dự án trọng điểm như: Sân bay Cát bi – Hải Phòng, Cao tốc Pháp Vân – Cầu Giẽ, Quốc lộ 5B, Hạ Long – Vân Đồn, khu công nghệ Cao Hòa Lạc…
-                     .work-detail-panel-body
-                        .work-detail-panel-box 
-                           .b-img 
-                              .inner 
-                                 +img("work-detail-img (1).jpg")
-                           .b-ctn
-                              .t-head 
-                                 h3.t-text Ngành nghề chính sản xuất đá làm vật liệu xây dựng.
-                              .t-content
-                                 p 
-                                    | Năm 2006, Công ty CP Đầu tư và Xây dựng giao thông Phương Thành (Công ty Phương Thành) nhận chuyển nhượng cổ phần và trở thành cổ đông chính của Công ty Cổ phần Đầu tư Khai thác Mỏ theo Giấy phép kinh doanh số  0303000032, đăng ký thay đổi lần thứ 5 ngày 11 tháng 04 năm 2006. Năm 2008, Công ty nhận chuyển nhượng toàn bộ cổ phần, trở thành chủ sở hữu và cơ cấu lại Công ty theo hình thức Công ty Trách nhiệm hữu hạn Một thành viên, đổi tên thành: Công ty TNHH MTV Đầu tư Xây dựng Khai thác Mỏ theo Giấy phép kinh doanh số 0304000228 ngày 23 tháng 04 năm 2008.
-                        .work-detail-panel-box 
-                           .b-img 
-                              .inner 
-                                 +img("work-detail-img (2).jpg")
-                           .b-ctn
-                              .t-head 
-                                 h3.t-text Ngành nghề chính sản xuất đá làm vật liệu xây dựng.
-                              .t-content
-                                 p 
-                                    | Năm 2016, để có tên riêng dễ nhận biết ngoài tên theo lĩnh vực hoạt động, Hội đồng quản trị Công ty Phương Thành đã quyết định đổi tên Công ty thành: Công ty TNHH MTV Đầu tư Xây dựng Khai thác mỏ Thuận Phát theo Giấy phép kinh doanh số 0500417828 ngày 21 tháng 4 năm 2016. Địa chỉ tại: xã Phú Mãn, huyện Quốc Oai, Thành phố Hà Nội. Giám đốc Công ty: Ông Khổng Văn Hậu, Phó giám đốc: Ông Nguyễn Xuân Minh.
-                        .work-detail-panel-box 
-                           .b-img 
-                              .inner 
-                                 +img("work-detail-img (3).jpg")
-                           .b-ctn
-                              .t-head 
-                                 h3.t-text Ngành nghề chính sản xuất đá làm vật liệu xây dựng.
-                              .t-content
-                                 p 
-                                    | Năm 2006, Công ty CP Đầu tư và Xây dựng giao thông Phương Thành (Công ty Phương Thành) nhận chuyển nhượng cổ phần và trở thành cổ đông chính của Công ty Cổ phần Đầu tư Khai thác Mỏ theo Giấy phép kinh doanh số  0303000032, đăng ký thay đổi lần thứ 5 ngày 11 tháng 04 năm 2006. Năm 2008, Công ty nhận chuyển nhượng toàn bộ cổ phần, trở thành chủ sở hữu và cơ cấu lại Công ty theo hình thức Công ty Trách nhiệm hữu hạn Một thành viên, đổi tên thành: Công ty TNHH MTV Đầu tư Xây dựng Khai thác Mỏ theo Giấy phép kinh doanh số 0304000228 ngày 23 tháng 04 năm 2008.
+                  .work-detail-panel-body
+                     .work-detail-panel-box 
+                        .b-img 
+                           .inner 
+                              +img("work-detail-img (1).jpg")
+                        .b-ctn
+                           .t-head 
+                              h3.t-text Ngành nghề chính sản xuất đá làm vật liệu xây dựng.
+                           .t-content
+                              p 
+                                 | Năm 2006, Công ty CP Đầu tư và Xây dựng giao thông Phương Thành (Công ty Phương Thành) nhận chuyển nhượng cổ phần và trở thành cổ đông chính của Công ty Cổ phần Đầu tư Khai thác Mỏ theo Giấy phép kinh doanh số  0303000032, đăng ký thay đổi lần thứ 5 ngày 11 tháng 04 năm 2006. Năm 2008, Công ty nhận chuyển nhượng toàn bộ cổ phần, trở thành chủ sở hữu và cơ cấu lại Công ty theo hình thức Công ty Trách nhiệm hữu hạn Một thành viên, đổi tên thành: Công ty TNHH MTV Đầu tư Xây dựng Khai thác Mỏ theo Giấy phép kinh doanh số 0304000228 ngày 23 tháng 04 năm 2008.
+                     .work-detail-panel-box 
+                        .b-img 
+                           .inner 
+                              +img("work-detail-img (2).jpg")
+                        .b-ctn
+                           .t-head 
+                              h3.t-text Ngành nghề chính sản xuất đá làm vật liệu xây dựng.
+                           .t-content
+                              p 
+                                 | Năm 2016, để có tên riêng dễ nhận biết ngoài tên theo lĩnh vực hoạt động, Hội đồng quản trị Công ty Phương Thành đã quyết định đổi tên Công ty thành: Công ty TNHH MTV Đầu tư Xây dựng Khai thác mỏ Thuận Phát theo Giấy phép kinh doanh số 0500417828 ngày 21 tháng 4 năm 2016. Địa chỉ tại: xã Phú Mãn, huyện Quốc Oai, Thành phố Hà Nội. Giám đốc Công ty: Ông Khổng Văn Hậu, Phó giám đốc: Ông Nguyễn Xuân Minh.
+                     .work-detail-panel-box 
+                        .b-img 
+                           .inner 
+                              +img("work-detail-img (3).jpg")
+                        .b-ctn
+                           .t-head 
+                              h3.t-text Ngành nghề chính sản xuất đá làm vật liệu xây dựng.
+                           .t-content
+                              p 
+                                 | Năm 2006, Công ty CP Đầu tư và Xây dựng giao thông Phương Thành (Công ty Phương Thành) nhận chuyển nhượng cổ phần và trở thành cổ đông chính của Công ty Cổ phần Đầu tư Khai thác Mỏ theo Giấy phép kinh doanh số  0303000032, đăng ký thay đổi lần thứ 5 ngày 11 tháng 04 năm 2006. Năm 2008, Công ty nhận chuyển nhượng toàn bộ cổ phần, trở thành chủ sở hữu và cơ cấu lại Công ty theo hình thức Công ty Trách nhiệm hữu hạn Một thành viên, đổi tên thành: Công ty TNHH MTV Đầu tư Xây dựng Khai thác Mỏ theo Giấy phép kinh doanh số 0304000228 ngày 23 tháng 04 năm 2008.
    section.sec-hpj.ss-pd 
       .container-second 
          .hpj

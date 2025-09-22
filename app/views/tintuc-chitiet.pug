@@ -5,7 +5,14 @@ block vars
     -bodyClass = 'page-news-detail'
 
 block container
-   +bnp("bnp-news-detail.jpg","Hợp long cầu dài nhất cao tốc Bắc – Nam qua Quảng Bình","Hợp long cầu dài nhất cao tốc Bắc – Nam qua Quảng Bình","Dự án")
+   .bn-news.ss-pd-t
+      .container
+         .b-panel 
+            +breadCrumb(["Tin tức","Hợp long cầu dài nhất cao tốc Bắc – Nam qua Quảng Bình"])
+            h1.t-text Hợp long cầu dài nhất cao tốc Bắc – Nam qua Quảng Bình
+            .d-flex.a-center
+               a(href="").b-tag TIN NGÀNH XÂY DỰNG
+               span.t-time 20.10.2025
    section.sec-news-dt.ss-pd 
       .container 
          .news-dt 

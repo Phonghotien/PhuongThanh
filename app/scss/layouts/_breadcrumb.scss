@@ -28,7 +28,7 @@
     &:not(:first-child) {
       &::before {
         display: inline-block;
-        content: "\f054";
+        content: "\f178";
         font-family: "Font Awesome 5 Pro";
         vertical-align: middle;
         position: relative;
@@ -41,7 +41,7 @@
     }
 
     @include hover {
-      color: var(--color-pri);
+      color: var(--color-sec);
     }
   }
 

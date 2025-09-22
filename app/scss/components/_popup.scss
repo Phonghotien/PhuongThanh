@@ -235,6 +235,16 @@
   &-head {
     position: relative;
     z-index: 1;
+    .btn.white {
+      background: var(--color-sec);
+      color: #fff;
+      @include hover {
+        color: var(--color-pri);
+      }
+      &::after {
+        display: none;
+      }
+    }
     .d-flex {
       @include max(700px) {
         flex-direction: column-reverse;
@@ -328,6 +338,54 @@
     padding: 4rem;
     @include max(1200px) {
       padding: 2.4rem;
+    }
+  }
+}
+.popup-mem-block {
+  overflow: hidden;
+}
+.popup-ct {
+  .popup-main {
+    width: 100rem;
+  }
+  &-main {
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+  .b-form {
+    .form-list {
+      --cl-border: rgba(45, 70, 124, 0.5);
+
+      .form-ip {
+        input,
+        textarea {
+          color: var(--color-text);
+
+          &::placeholder {
+            color: rgba(45, 70, 124, 0.5);
+          }
+        }
+      }
+      .form-group {
+        border-color: rgba(45, 70, 124, 0.5);
+        --color-white: var(--color-text);
+        .filename {
+          color: rgba(45, 70, 124, 0.5);
+        }
+      }
+      .b-select {
+        .select2-container--default .select2-selection--single {
+          background: transparent;
+          border: unset;
+          border-bottom: 0.1rem solid rgba(45, 70, 124, 0.5);
+          border-radius: 0 !important;
+        }
+        .select2-container
+          .select2-selection--single
+          .select2-selection__rendered {
+          padding-left: 0;
+        }
+      }
     }
   }
 }

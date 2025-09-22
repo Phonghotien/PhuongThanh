@@ -148,7 +148,7 @@
   position: sticky;
   top: 10rem;
   .ct-form .b-inner {
-    padding: 4.8rem 2.4rem;
+    padding: 2.4rem;
   }
 }
 .sec-career-detail {
@@ -589,6 +589,13 @@
       rgba(255, 255, 255, 0.95) 49.08%,
       rgba(255, 255, 255, 0) 100%
     );
+    @include max(768px) {
+      background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.95) 49.08%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
   }
   img {
     display: block;
@@ -621,9 +628,9 @@
     .t-num {
       font-family: "SVN-Bebas Neue Pro";
       font-weight: 700;
-      font-size: 7.4rem;
+      font-size: 7rem;
       @include max(768px) {
-        font-size: 6rem;
+        font-size: 5.2rem;
       }
     }
     .t-txt {
@@ -672,7 +679,6 @@
 .abn-bg {
   position: absolute;
   @include full;
-  z-index: -1;
   opacity: 0.03;
   img {
     display: block;
@@ -702,8 +708,8 @@
     top: -4rem;
     bottom: -4rem;
     z-index: -1;
-    background: var(--color-pri);
-    border-top: 0.6rem solid var(--color-sec);
+    background: var(--color-sec);
+    border-top: 0.6rem solid var(--color-pri);
   }
 }
 .abv-wrap {
@@ -749,10 +755,10 @@
       .t-num {
         font-size: 2.4rem;
         font-family: "SVN-Bebas Neue Pro";
-        font-weight: 700;
+        font-weight: 300;
       }
       .txt {
-        @include fz-18;
+        @include fz-24;
         font-weight: 700;
       }
     }
@@ -1226,5 +1232,160 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+.career-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.career-search {
+  max-width: 100rem;
+  margin: 0 auto;
+  width: 100%;
+  .b-btn {
+    @include max(768px) {
+      width: 100%;
+    }
+  }
+
+  .b-gr {
+    display: flex;
+    gap: 1.2rem;
+    flex: 1;
+    @include max(500px) {
+      flex-direction: column;
+    }
+  }
+  .btn {
+    height: 100%;
+    @include max(768px) {
+      margin: 0 auto;
+    }
+  }
+  .b-box {
+    padding-bottom: 0.4rem;
+    border-bottom: 0.1rem solid var(--color-sec);
+    flex: 1;
+    .select2-container--default .select2-selection--single {
+      border: unset;
+      background: unset;
+    }
+    .select2-selection__rendered {
+      padding-left: 0;
+    }
+    input {
+      border: unset;
+      outline: unset;
+      background: unset;
+      width: 100%;
+      height: 100%;
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: var(--color-text);
+    }
+  }
+}
+.page-error {
+  min-height: calc(100vh - var(--size-hd));
+  padding: 4rem 0.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+
+  .b-img {
+    position: absolute;
+    @include full;
+    z-index: -1;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .b-panel {
+    max-width: 64rem;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--color-white);
+  }
+  .t-head {
+    margin-bottom: 2.4rem;
+  }
+  .t-num {
+    font-size: 20rem;
+    font-weight: 900;
+    @include font-second;
+    @include max(600px) {
+      font-size: 20vw;
+    }
+  }
+}
+.pre-loader {
+  position: fixed;
+  @include full;
+  background: var(--color-white);
+  z-index: 100;
+  &-inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    @include max(768px) {
+      gap: 1rem;
+    }
+  }
+  &-logo {
+    max-width: 20rem;
+    @include max(768px) {
+      max-width: 12rem;
+    }
+  }
+  &-progress {
+    width: 20rem;
+    height: 0.6rem;
+    background: #15264b;
+    border-radius: 10rem;
+    position: relative;
+    overflow: hidden;
+    @include max(768px) {
+      width: 12rem;
+      height: 0.3rem;
+    }
+    .line-progress {
+      position: absolute;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      top: 0;
+      background: var(--color-pri);
+      border-radius: inherit;
+    }
+  }
+}
+.wpcf7-response-output {
+  position: static !important;
+  margin-top: 0.8rem !important;
+}
+.pse {
+  .career-search {
+    max-width: 64rem;
+    .b-box {
+      border: 0.1rem solid var(--color-text);
+      padding: 0.8rem;
+    }
+  }
+  &-note {
+    margin-top: 2.4rem;
+  }
+  &-block {
+    margin-top: 4.8rem;
+    @include max(768px) {
+      margin-top: 2.4rem;
+    }
   }
 }

@@ -1,0 +1,70 @@
+extends layout/layout
+
+block vars
+    -title = ''
+    -bodyClass = 'page-product'
+
+block container
+   +bnp("bnp-tlsp.jpg","THANH LÝ SẢN PHẨM","","Thanh lý sản phẩm")
+   section.sec-prds.ss-pd 
+      .container 
+         .prds
+            .prds-wrap
+               .prds-head.mb-40
+                  +title("Danh mục sản phẩm cần thanh lý","center title40")
+               .career-search
+                  .d-flex 
+                     .b-gr
+                        .b-box 
+                           input(type="text" placeholder="Nhập tên sản phẩm")
+                        .b-box
+                           .b-select 
+                              select(name="").re-select-main
+                                 option(value="") Tình trạng
+                                 option(value="") 1
+                                 option(value="") 2
+                        .b-box 
+                           .b-select 
+                              select(name="").re-select-main
+                                 option(value="") Chọn khu vực
+                                 option(value="") 1
+                                 option(value="") 2
+                     .b-btn 
+                        +Btn("Tìm kiếm")
+               .prds-block
+                  .prds-list.row
+                     each i, index in Array(6)
+                        .col.col-4
+                           .prds-item
+                              .b-image
+                                 .b-tag.iwt
+                                    span.icon 
+                                       +img("tag-ic.svg")
+                                    span.t-text Hà Nội
+                                 .b-slider.slideFade 
+                                    .b-sw
+                                       +Swiper 
+                                          each i, index in Array(3)
+                                             .swiper-slide.col 
+                                                .inner-image 
+                                                   +img(`prds-${index + 1}.jpg`)
+                                    +pagination("b-pagi")
+                              .b-ctn 
+                                 h3.t-head
+                                    a(href="") 
+                                       | THANH SẮT HỘP CŨ CÔNG TRÌNH CẦU ĐƯỜNG
+                                 .b-content
+                                    .t-group 
+                                       .t-price 2.000.000đ
+                                          span.t16 /lô
+                                       span.t-note (liên hệ nhận báo giá)
+                                    .t-list 
+                                       .t-item
+                                          span.txt-main Tình trạng
+                                          span.txt-sub Độ bền còn 80–90%
+                                       .t-item
+                                          span.txt-main Số lượng
+                                          span.txt-sub 100 tấn
+                                 +Btn("Liên hệ ngay")
+                  +PageNumber()
+   +connect()

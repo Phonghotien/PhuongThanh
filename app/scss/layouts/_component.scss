@@ -260,10 +260,14 @@
       font-weight: 500;
       word-wrap: break-word;
       width: 100%;
+      cursor: pointer;
       .t-gr {
         display: flex;
         align-items: center;
         gap: 0.4rem;
+        .txt {
+          @include lc(1);
+        }
       }
       .t-txt {
         color: #3e3e5c;
@@ -950,11 +954,11 @@ input[type="number"] {
   cursor: pointer;
   z-index: 2;
   @include max(1200px) {
-    height: 3.8rem;
-    width: 3.8rem;
-    background-color: var(--color-pri);
+    height: 4rem;
+    width: 4rem;
+    background-color: #e5e7eb;
     padding: 1rem;
-    border-radius: 0.4rem;
+    border-radius: 100rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1036,12 +1040,12 @@ input[type="number"] {
       // display: none;
     }
 
-    @include min(1201px) {
-      background-color: #024f61;
-      padding: 0 1rem;
-      border-radius: 100rem;
-      height: 4rem;
-    }
+    //  @include min(1201px) {
+    //    background-color: #024f61;
+    //    padding: 0 1rem;
+    //    border-radius: 100rem;
+    //    height: 4rem;
+    //  }
 
     @include max(1200px) {
       .txt {
@@ -1088,7 +1092,7 @@ input[type="number"] {
     }
     @include max(1200px) {
       transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      transform: translate(-50%, -100%) rotate(-90deg) !important;
+      transform: translate(-50%, -100%) !important;
     }
 
     .hd-lg-item {

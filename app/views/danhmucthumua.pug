@@ -1,0 +1,55 @@
+extends layout/layout
+
+block vars
+    -title = ''
+    -bodyClass = 'page-cate'
+
+block container
+   +bnp("bnp-cate.jpg","DANH MỤC THU MUA","","Thanh lý sản phẩm")
+   section.sec-cate.ss-pd
+      .container
+         .cate
+            .cate-wrap
+               .cate-head.mb-40
+                  +title("DANH MỤC SẢN PHẨM THU MUA","title40 t-center")
+               .career-search
+                  .d-flex 
+                     .b-gr
+                        .b-box 
+                           input(type="text" placeholder="Nhập tên sản phẩm")
+                     .b-btn 
+                        +Btn("Tìm kiếm")
+               .prds-block
+                  .prds-list.row
+                     each i, index in Array(6)
+                        .col.col-4
+                           .prds-item
+                              .b-image
+                                 .b-tag.iwt
+                                    span.icon 
+                                       +img("tag-ic.svg")
+                                    span.t-text Hà Nội
+                                 .b-slider.slideFade 
+                                    .b-sw
+                                       +Swiper 
+                                          each i, index in Array(3)
+                                             .swiper-slide.col 
+                                                .inner-image 
+                                                   +img(`prds-${index + 1}.jpg`)
+                                    +pagination("b-pagi")
+                              .b-ctn 
+                                 span.c-pri.fw-5 ĐANG NHẬN BÁO GIÁ
+                                 h3.t-head
+                                    a(href="") 
+                                       | MÁY TÍNH ĐỂ BÀN/LAPTOP PHỤC VỤ CÔNG VIỆC
+                                 .b-content
+                                    .t-list 
+                                       .t-item
+                                          span.txt-main Số lượng
+                                          span.txt-sub 10 máy tính
+                                       .t-item
+                                          span.txt-main Thời gian nhận báo giá
+                                          span.txt-sub Đến 25/09/2025
+                                 +Btn("Báo giá ngay")
+                  +PageNumber()
+   +connect()

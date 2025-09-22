@@ -19,6 +19,9 @@
     width: 90%;
     min-width: initial;
   }
+  .container {
+    padding: 0;
+  }
 
   &.sticky {
     top: var(--size-hd);
@@ -88,6 +91,11 @@
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
+    .b-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
   }
 
   &-mxh {

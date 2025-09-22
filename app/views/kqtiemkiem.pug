@@ -1,0 +1,32 @@
+extends layout/layout
+
+block vars
+    -title = ''
+    -bodyClass = 'page-search'
+
+block container
+   section.sec-pse.ss-pd 
+      .container 
+         .pse
+            .pse-wrap
+               .pse-head.mb-40
+                  +title("Kết quả tìm kiếm","title40 t-center")
+               .career-search
+                  .d-flex 
+                     .b-gr
+                        .b-box 
+                           input(type="text" placeholder="Nhập tên sản phẩm")
+                     .b-btn 
+                        +Btn("Tìm kiếm")
+               .pse-note
+                  .t-text.t-center.t18
+                     | There are 2525 results matching 
+                     span.fw-7 “Phương Thành Transcosin”
+               .pse-block
+                  .news-block
+                     .news-list.row 
+                        each i,index in Array(9)
+                           .col.col-4
+                              +news(index)
+                     +PageNumber()
+   +connect()

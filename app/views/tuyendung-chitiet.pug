@@ -5,7 +5,23 @@ block vars
     -bodyClass = 'page-career-detail'
 
 block container
-   +bnp("bnp-td.jpg","Tuyển dụng","Minh bạch – Uy tín – Đồng hành phát triển","Tuyển dụng")
+   .bn-career.ss-pd-t
+      .container
+         .b-panel
+            .b-left 
+               +breadCrumb(["Tuyển dụng","Tuyển dụng"])
+               h1.t-text Khảo sát công trình
+            .b-right
+               .box-info
+                  .b-item
+                     span.text Số lượng 
+                     span.value 1
+                  .b-item
+                     span.text Mức lương 
+                     span.value 20 - 25 triệu
+                  .b-item
+                     span.text Hạn ứng tuyển
+                     span.value 20/05/2025
    section.sec-career-detail.ss-pd
       .career-detail-bg
          +img("career-detail-bg.png")

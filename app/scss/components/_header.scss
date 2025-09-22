@@ -41,6 +41,7 @@
     height: 100%;
     @include max(1200px) {
       align-items: center;
+      position: relative;
     }
   }
   &-logo {
@@ -109,6 +110,9 @@
             transform: translateY(-50%);
           }
         }
+        @include hover {
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -118,6 +122,9 @@
   &-bot {
     height: calc(var(--size-hd) - var(--size-hd-top));
     position: relative;
+    @include max(1200px) {
+      position: static;
+    }
   }
   &-search {
     width: 1.6rem;
@@ -160,7 +167,7 @@
       }
     }
     &-wrap {
-      padding: 0.8rem;
+      padding: 0.4rem;
       border-radius: 0.4rem;
       background: #fff;
       box-shadow: 0 1.6rem 4rem -1rem rgba(50, 50, 93, 0.32),

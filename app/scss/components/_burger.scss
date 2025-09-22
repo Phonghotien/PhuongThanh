@@ -33,9 +33,16 @@
   width: 2.4rem;
   height: 0.2rem;
   border-radius: 0.4rem;
-  background: #274c12;
+  background: #000;
   display: block;
   margin: 0.5rem 0;
   transition: 0.3s ease-in-out;
   transform-origin: 50% 50%;
+}
+.prj-list {
+  > .col {
+    @include max(500px) {
+      width: 100%;
+    }
+  }
 }

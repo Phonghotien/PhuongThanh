@@ -12,6 +12,23 @@ block container
             .career-wrap
                .career-head.mb-40
                   +title("Các công việc đang tuyển","title40 t-center")
+               .career-search 
+                  .d-flex 
+                     .b-gr
+                        .b-box 
+                           input(type="text" placeholder="Nhập vị trí tìm kiếm")
+                        .b-box
+                           .b-select 
+                              select(name="").re-select-main
+                                 option(value="") Chọn bộ phận
+                                 option(value="") 1
+                                 option(value="") 2
+                        .b-box 
+                           .b-select 
+                              select(name="").re-select-main
+                                 option(value="") Chọn khu vực      
+                     .b-btn 
+                        +Btn("Tìm kiếm")
                .career-block 
                   .career-list.row
                      each i,index in Array(6)

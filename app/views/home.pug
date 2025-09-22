@@ -17,10 +17,11 @@ block container
                               +img(`bnh-img (${index + 1}).jpg`)
                            .container 
                               .bnh-content
-                                 .t-head 
-                                    span.t-top
-                                       +img("bnh-text1.svg")
-                                 +Btn("Liên hệ với chúng tôi")
+                                 .b-panel
+                                    .t-head 
+                                       span.t-top
+                                          +img("bnh-text1.svg")
+                                    +Btn("Liên hệ với chúng tôi")
                +pagination("bnh-pagination")
                +SwiperControl("bnh-control")
    section.sec-hab
@@ -117,6 +118,58 @@ block container
                   span.t-dc thi công
                   span.t-num 45
                   span.txt Tỉnh thành trên khắp cả nước
+   .sec-abv
+      .abv-bg 
+         +img("abv-bg.jpg")
+      .container 
+         .abv
+            .abv-wrap 
+               .abv-panel 
+                  .abv-head 
+                     +title("Giá trị cốt lõi","title40 white")
+                  .abv-block 
+                     .abv-list.row 
+                        .col.col-3 
+                           .abv-it
+                              .b-head 
+                                 span.icon 
+                                    +img("abv-ic (1).svg")
+                                 .t-gr 
+                                    span.t-num 01
+                                    span.txt Chân thành
+                              .b-des 
+                                 p 
+                                    | Minh bạch, thiện chí trong mọi quan hệ, lắng nghe và chia sẻ để xây dựng niềm tin.
+                        .col.col-3 
+                           .abv-it
+                              .b-head 
+                                 span.icon 
+                                    +img("abv-ic (2).svg")
+                                 .t-gr 
+                                    span.t-num 02
+                                    span.txt  Trách nhiệm
+                              .b-des 
+                                 p Đúng tiến độ, đảm bảo chất lượng và an toàn, góp phần tạo giá trị bền vững.
+                        .col.col-3 
+                           .abv-it
+                              .b-head 
+                                 span.icon 
+                                    +img("abv-ic (3).svg")
+                                 .t-gr 
+                                    span.t-num 03
+                                    span.txt Trung thực
+                              .b-des 
+                                 p Giữ uy tín bằng hành động, minh bạch thông tin và cam kết rõ ràng.
+                        .col.col-3 
+                           .abv-it
+                              .b-head 
+                                 span.icon 
+                                    +img("abv-ic (4).svg")
+                                 .t-gr 
+                                    span.t-num 04
+                                    span.txt Hiệu quả
+                              .b-des 
+                                 p  Tối ưu nguồn lực, áp dụng công nghệ để mang lại kết quả vượt mong đợi.
    section.sec-hpj.ss-pd 
       .container-second 
          .hpj

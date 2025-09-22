@@ -129,13 +129,11 @@ mixin Lang()
   .hd-lg 
     .hd-lg-item 
       +img("ic-vn.svg")
-      span.txt Tiếng việt
       span.ic
         i.fas.fa-chevron-down
     .hd-lg-drop 
       a(href="").hd-lg-item 
         +img("ic-vn.svg")
-        span.txt English
 mixin like()
    .heart-container.likeJs
       .svg-container
@@ -171,16 +169,13 @@ mixin news(index)
 mixin bnp(img,title,des,breadcrumb)
    .bnp 
       .bnp-img 
-         +img(img)
+         +img("bnp-img.jpg")
       .container 
          .bnp-wrap 
-            .bnp-ctn 
-               +breadCrumb([breadcrumb])
+            .bnp-ctn(data-text="PHƯƠNG THÀNH TRANCONSIN")
                h1.bnp-title 
                   | #{title}
-               .t-des 
-                  p 
-                     | #{des}
+               +breadCrumb([breadcrumb])
 mixin connect()
    .sec-connect 
       .container 

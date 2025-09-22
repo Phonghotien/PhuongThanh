@@ -65,7 +65,7 @@
     .menu {
       display: flex;
       flex-direction: column;
-      gap: 2.4rem;
+      gap: 1.2rem;
       &-item {
         &.current-menu-item {
           .menu-link {
@@ -93,6 +93,7 @@
     gap: 0.8rem;
     .icon {
       display: flex;
+      max-width: 18rem;
     }
   }
   &-bot {
